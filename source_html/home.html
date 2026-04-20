@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Work_Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#1b4332", /* Deep Forest Green from branding */
+                      "on-primary": "#ffffff",
+                      "primary-container": "#d8e2dc",
+                      "secondary": "#2d6a4f",
+                      "secondary-container": "#95d5b2",
+                      "background": "#fdfaf5", /* Parchment/Cream from branding */
+                      "surface": "#fdfaf5",
+                      "surface-container-low": "#f7f2ea",
+                      "surface-container": "#f0ede5",
+                      "on-surface": "#1b4332",
+                      "on-surface-variant": "#405d4b",
+                      "outline": "#787c75"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Work Sans"],
+                      "label": ["Work Sans"]
+              }
+            },
+          },
+        }
+    </script>
+<style>@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+        } to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    }
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+        } to {
+        opacity: 1;
+        transform: translateX(0);
+        }
+    }
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+        } 50% {
+        transform: translateY(-15px);
+        }
+    }
+.reveal {
+    opacity: 0;
+    transform: translatey(40px);
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1)
+    }
+.reveal.active {
+    opacity: 1;
+    transform: translatey(0)
+    }
+.organic-easing {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.whisper-shadow {
+    box-shadow: 0 20px 40px rgba(27, 67, 50, 0.04);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1)
+    }
+.whisper-shadow:hover {
+    box-shadow: 0 30px 60px rgba(27, 67, 50, 0.08)
+    }
+body {
+    font-family: "Work Sans", sans-serif;
+    background-color: #fdfaf5;
+    color: #1b4332;
+    overflow-x: hidden
+    }
+h1, h2, h3 {
+    font-family: "Manrope", sans-serif
+    }
+nav.scrolled {
+    height: 4.5rem;
+    background-color: rgba(253, 250, 245, 0.9);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03)
+    }
+.btn-interact {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+    }
+.btn-interact:active {
+    transform: scale(0.95)
+    }
+.texture-bg {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAkk7PjuhroQaElXA6PpTPK-fTNbHcfODUyQS-u3WnIpbTuCqKARe1jTvH0o7CEsD6lp0Ab_BiwWdIPcxrVKpSq-Bw3cC99TCkoQSwP1qkyfQNK1fhEFTqJUOwuVvod5hX_5nrhPHtJg4s4_GsRMj300wF7SMtPKdpZ304gUHV5QxxkSQR1Kq3fx_mxbL5sRHKKepEbS61zYkvz7pFm6CTawH11JDooKdTKbIMV6KWPqKPhjfuLPuwiT1yaU5TU6G1zIDJ8mkuk2rMH);
+    background-attachment: fixed
+    }</style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container texture-bg">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-transparent h-24 flex justify-between items-center px-8 lg:px-16 max-w-full transition-all duration-500 organic-easing" id="topNav">
+<div class="flex items-center gap-3">
+<img alt="Life Circle Logo" class="h-12 w-12 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujwCsowv4h4kuMrzOQjnJdTHOaSFmBI-sUnyxT00fWnSF2rpqr3K4KBzzonJ0SZTDEL3sQ0XDruZxBGFK9r_uZIL5M9-oYHWAzCRO_0UQSJi4SPeHwaAtbs2KmuT6P9ocuklLj1gsbQit2T-8jsOyhIXVRLzFO_qcyU2QlGAhxMo-S5KIRCCFxIZu4uO4XfuZ1d2Az5ZTI8Tf0qxylYsQn-56V37iKH5P4RY_mMIIKUh6MgRLh7-KkBFyyRCfV3NouHrBBrhk3jDQ"/>
+<div class="flex flex-col">
+<span class="text-xl font-extrabold text-primary font-manrope leading-tight uppercase tracking-tight">Life Circle</span>
+<span class="text-[10px] text-secondary font-bold tracking-tighter uppercase">Counseling Services</span>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-10 font-manrope font-bold tracking-tight">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+<a class="text-primary border-b-2 border-primary transition-colors" href="#services">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
+</div>
+<button class="btn-interact bg-primary text-on-primary px-6 py-2.5 rounded-full font-manrope font-bold hover:brightness-110 shadow-lg">
+            Book Appointment
+        </button>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center overflow-hidden">
+<div class="container mx-auto px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-20 relative z-10">
+<div class="animate-[fadeInUp_1s_ease-out_forwards]">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container/30 text-secondary font-bold text-sm mb-6">
+<span class="material-symbols-outlined text-sm">verified</span>
+                        Non-Medical Counselling Service
+                    </div>
+<h1 class="text-5xl md:text-7xl font-extrabold text-primary leading-[1.1] mb-6 tracking-tight">
+                        Sharmin Mujahid
+                        <span class="block text-3xl md:text-4xl text-secondary font-medium mt-2">Developmental Counselor</span>
+</h1>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8 max-w-xl animate-[fadeInUp_1.2s_ease-out_forwards]">
+                        With 15 years of experience in the Disability Sector and 10 years in the Counseling Sector, I provide a compassionate sanctuary for children and families. My holistic approach focuses on nurturing the whole child through evidence-based developmental guidance.
+                    </p>
+<div class="flex flex-wrap gap-4 mb-12 animate-[fadeInUp_1.4s_ease-out_forwards]">
+<button class="btn-interact bg-primary text-on-primary px-8 py-4 rounded-full font-bold text-lg whisper-shadow hover:brightness-125">Start Your Journey</button>
+<a class="btn-interact bg-white border-2 border-primary/20 text-primary px-8 py-4 rounded-full font-bold text-lg flex items-center gap-3" href="tel:+8801716437859">
+<span class="material-symbols-outlined">call</span>
+                            +880 1716 437859
+                        </a>
+</div>
+</div>
+<div class="relative animate-[fadeInRight_1.2s_ease-out_forwards] flex justify-center">
+<div class="absolute -top-10 -right-10 w-96 h-96 bg-secondary-container/20 rounded-full blur-3xl animate-[float_6s_infinite_ease-in-out]"></div>
+<div class="relative w-full max-w-md bg-white p-4 rounded-[2.5rem] whisper-shadow transform rotate-2 hover:rotate-0 transition-transform duration-700">
+<div class="rounded-[2rem] overflow-hidden aspect-[4/5] bg-surface-container">
+<img alt="Sharmin Mujahid" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uiFu3pRXjpNp9cQxIX7scVJjR3TNm-wNt3GotrNIiRt_tDevj3VxGRxbdPUoDCTM9El777mJrlwPwlM_F0RahNJe7uMhOwuD3Qzhr1nRrNpngOKxMGzeTzixwDOcX5Dg47E8Hncm4cLTppvNrcbvSuircRQo6QK7OH9GjEnAmUj9C22YRYGJ0V6ZaDvXS4YgLEcK8CFYWPDTvhxJDbUZO44WjiWR7psmfFIofcYb4DeMdkZC3h8e9du6LLSjHFKW5oZfbkgjE-i38g"/>
+</div>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-primary p-6 rounded-2xl whisper-shadow max-w-xs text-white animate-[float_5s_infinite_ease-in-out_1s]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-container text-4xl" style="font-variation-settings: 'FILL' 1;">eco</span>
+<p class="text-sm font-medium leading-tight">15 years in the Disability Sector and 10 years in the Counseling Sector.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-32 bg-primary reveal" id="services">
+<div class="container mx-auto px-8 lg:px-16">
+<div class="text-center mb-20">
+<span class="text-secondary-container font-bold tracking-[0.2em] uppercase text-sm">Comprehensive Care</span>
+<h2 class="text-4xl md:text-5xl font-extrabold text-white mt-4 mb-6">Our Services</h2>
+<p class="text-secondary-container/70 max-w-2xl mx-auto text-lg">Providing a specialized spectrum of support for developmental, emotional, and behavioral well-being.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service List based on Image 3 -->
+<div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all group reveal">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-4">family_restroom</span>
+<h3 class="text-xl font-bold text-white mb-2">Parenting Guidance</h3>
+<p class="text-white/60 text-sm">Expert strategies to navigate the complexities of modern parenting and child development.</p>
+</div>
+<div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all group reveal">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-4">accessibility_new</span>
+<h3 class="text-xl font-bold text-white mb-2">Disability Consultancy</h3>
+<p class="text-white/60 text-sm">Specialized advocacy and structural support for individuals with diverse abilities.</p>
+</div>
+<div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all group reveal">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-4">fact_check</span>
+<h3 class="text-xl font-bold text-white mb-2">Developmental Assessment</h3>
+<p class="text-white/60 text-sm">Comprehensive evaluation and personalized growth roadmaps for each child.</p>
+</div>
+<div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all group reveal">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-4">psychology_alt</span>
+<h3 class="text-xl font-bold text-white mb-2">Child &amp; Adolescent Counselling</h3>
+<p class="text-white/60 text-sm">Tailored therapeutic support for the unique challenges of young minds.</p>
+</div>
+<div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all group reveal">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-4">group</span>
+<h3 class="text-xl font-bold text-white mb-2">Relationship &amp; Family</h3>
+<p class="text-white/60 text-sm">Strengthening family bonds through empathetic communication and mediation.</p>
+</div>
+<div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all group reveal">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-4">school</span>
+<h3 class="text-xl font-bold text-white mb-2">Teachers &amp; Parents Training</h3>
+<p class="text-white/60 text-sm">Workshops and sessions designed to empower the primary caregivers and educators.</p>
+</div>
+<div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all group reveal">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-4">brain</span>
+<h3 class="text-xl font-bold text-white mb-2">CBT-Based Counselling</h3>
+<p class="text-white/60 text-sm">Effective techniques for managing mild to moderate cases of emotional distress.</p>
+</div>
+<div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all group reveal">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-4">mood_bad</span>
+<h3 class="text-xl font-bold text-white mb-2">Depression &amp; Anxiety Support</h3>
+<p class="text-white/60 text-sm">Caring intervention for managing mental health challenges in a safe environment.</p>
+</div>
+<div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all group reveal">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-4">health_and_safety</span>
+<h3 class="text-xl font-bold text-white mb-2">Addiction Recovery Support</h3>
+<p class="text-white/60 text-sm">Collaborative support pathways for recovery, integrated with medical professionals.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About/Bio Section -->
+<section class="py-32 bg-surface reveal" id="about">
+<div class="container mx-auto px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative group">
+<div class="rounded-[3rem] overflow-hidden aspect-square whisper-shadow relative z-10 border-[12px] border-white">
+<img alt="Sharmin Mujahid professional" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida/ADBb0uiFu3pRXjpNp9cQxIX7scVJjR3TNm-wNt3GotrNIiRt_tDevj3VxGRxbdPUoDCTM9El777mJrlwPwlM_F0RahNJe7uMhOwuD3Qzhr1nRrNpngOKxMGzeTzixwDOcX5Dg47E8Hncm4cLTppvNrcbvSuircRQo6QK7OH9GjEnAmUj9C22YRYGJ0V6ZaDvXS4YgLEcK8CFYWPDTvhxJDbUZO44WjiWR7psmfFIofcYb4DeMdkZC3h8e9du6LLSjHFKW5oZfbkgjE-i38g"/>
+</div>
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-secondary-container/20 rounded-full -z-0"></div>
+<div class="absolute -bottom-10 -right-10 px-8 py-6 bg-white rounded-3xl whisper-shadow z-20">
+<div class="text-4xl font-black text-primary">15+</div>
+<div class="text-sm font-bold text-secondary uppercase tracking-widest">Years of Counseling/Developmental Lead</div>
+</div>
+</div>
+<div class="reveal">
+<span class="text-secondary font-bold tracking-widest uppercase text-sm">The Founder's Vision</span>
+<h2 class="text-4xl font-extrabold mb-8 mt-4 text-primary">Nurturing the Whole Child</h2>
+<div class="space-y-6 text-on-surface-variant leading-relaxed text-lg">
+<p>At Life Circle, we believe that each individual holds a unique light. My mission as a Developmental Counselor is to help families identify and overcome barriers to growth through a blend of counseling expertise and maternal empathy.</p>
+<p>We provide non-medical counselling services where no medication is prescribed, focusing instead on structural changes, behavioral techniques, and emotional resilience.</p>
+</div>
+<div class="mt-10 p-8 bg-surface-container-low rounded-3xl border-l-8 border-secondary italic whisper-shadow text-primary font-medium">
+                        "We don't just treat symptoms; we nurture the whole child and support the whole family to create lasting, generational change."
+                    </div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-surface-container reveal" id="contact">
+<div class="container mx-auto px-8 lg:px-16">
+<div class="bg-primary rounded-[3rem] overflow-hidden relative p-12 lg:p-20">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-secondary/20 pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row justify-between items-center gap-12">
+<div class="text-center lg:text-left text-white max-w-xl">
+<h2 class="text-4xl font-extrabold mb-4">Start Your Healing Journey Today</h2>
+<p class="text-white/70 text-lg mb-8">Reach out to schedule your developmental assessment or family counselling session.</p>
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-4 justify-center lg:justify-start">
+<div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<div class="text-white/60 text-sm font-bold uppercase tracking-widest">Appointment Line</div>
+<a class="text-2xl font-bold" href="tel:+8801716437859">+880 1716 437859</a>
+</div>
+</div>
+<div class="flex items-center gap-4 justify-center lg:justify-start">
+<div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<div class="text-white/60 text-sm font-bold uppercase tracking-widest">Direct Email</div>
+<a class="text-2xl font-bold" href="mailto:lifecircle835@gmail.com">lifecircle835@gmail.com</a>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full max-w-sm bg-white p-8 rounded-3xl whisper-shadow">
+<h4 class="text-xl font-bold text-primary mb-6">Quick Contact</h4>
+<div class="space-y-4">
+<input class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary" placeholder="Your Name" type="text"/>
+<input class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary" placeholder="Phone Number" type="tel"/>
+<button class="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-secondary transition-colors">Send Inquiry</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-white py-16 px-8 border-t border-white/10">
+<div class="container mx-auto max-w-7xl">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<img alt="Logo" class="h-10 w-10 brightness-0 invert" src="https://lh3.googleusercontent.com/aida/ADBb0ujwCsowv4h4kuMrzOQjnJdTHOaSFmBI-sUnyxT00fWnSF2rpqr3K4KBzzonJ0SZTDEL3sQ0XDruZxBGFK9r_uZIL5M9-oYHWAzCRO_0UQSJi4SPeHwaAtbs2KmuT6P9ocuklLj1gsbQit2T-8jsOyhIXVRLzFO_qcyU2QlGAhxMo-S5KIRCCFxIZu4uO4XfuZ1d2Az5ZTI8Tf0qxylYsQn-56V37iKH5P4RY_mMIIKUh6MgRLh7-KkBFyyRCfV3NouHrBBrhk3jDQ"/>
+<div class="flex flex-col">
+<span class="text-xl font-black font-manrope leading-tight">LIFE CIRCLE</span>
+<span class="text-[10px] text-white/50 tracking-widest uppercase">Reg: C-204398</span>
+</div>
+</div>
+<p class="text-white/60 text-sm leading-relaxed max-w-xs">Empowering children and families through counseling excellence and heart-led developmental guidance. Non-medical counselling service.</p>
+</div>
+<div>
+<h4 class="text-xs uppercase tracking-[0.2em] font-bold text-white/40 mb-8">Navigation</h4>
+<ul class="flex flex-col gap-4 text-sm font-medium">
+<li><a class="hover:text-secondary-container transition-colors" href="#">Mission &amp; Values</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="#services">Services Portfolio</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="#">Developmental Resources</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs uppercase tracking-[0.2em] font-bold text-white/40 mb-8">Official Connect</h4>
+<div class="flex flex-col gap-4 text-sm">
+<p class="text-white/60 flex items-center gap-3"><span class="material-symbols-outlined text-secondary-container">location_on</span> Dhaka, Bangladesh</p>
+<p class="text-white/60 flex items-center gap-3"><span class="material-symbols-outlined text-secondary-container">facebook</span> Facebook - Life Circle</p>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-white/40 text-xs uppercase tracking-widest">© 2024 Life Circle. All rights reserved.</p>
+<div class="text-[10px] text-white/30 uppercase tracking-tighter">No medication prescribed • Counseling support Only</div>
+</div>
+</div>
+</footer>
+<script>
+        // Scroll Reveal implementation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+          revealElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            if (rect.top < windowHeight * 0.9) {
+              el.classList.add('active');
+            }
+          });
+        };
+
+        // Navbar scroll handler
+        const topNav = document.getElementById('topNav');
+        const handleNavScroll = () => {
+          if (window.scrollY > 80) {
+            topNav.classList.add('scrolled');
+          } else {
+            topNav.classList.remove('scrolled');
+          }
+        };
+
+        window.addEventListener('scroll', () => {
+          revealOnScroll();
+          handleNavScroll();
+        });
+
+        // Initial triggers
+        window.addEventListener('load', () => {
+          revealOnScroll();
+          handleNavScroll();
+        });
+    </script>
+</body></html>

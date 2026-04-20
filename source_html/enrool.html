@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Enrollment | Life Circle</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#fdfab4",
+                        "outline": "#787c75",
+                        "surface-container-high": "#e7e9e2",
+                        "on-surface-variant": "#5c605a",
+                        "on-primary-fixed": "#204726",
+                        "on-primary-fixed-variant": "#3d6440",
+                        "surface-bright": "#fafaf5",
+                        "background": "#fafaf5",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#efeba7",
+                        "on-error-container": "#6e1400",
+                        "inverse-surface": "#0d0f0c",
+                        "inverse-on-surface": "#9c9d99",
+                        "on-primary": "#e9ffe5",
+                        "surface": "#fafaf5",
+                        "error": "#a73b21",
+                        "primary-fixed-dim": "#b3e0b2",
+                        "secondary": "#4a6800",
+                        "surface-container-low": "#f3f4ee",
+                        "error-container": "#fd795a",
+                        "primary-dim": "#345c38",
+                        "on-tertiary-fixed-variant": "#6c6a33",
+                        "tertiary-dim": "#575520",
+                        "primary-container": "#c0eebf",
+                        "surface-tint": "#406843",
+                        "error-dim": "#791903",
+                        "inverse-primary": "#cefdcd",
+                        "surface-container-highest": "#e0e4dc",
+                        "on-surface": "#2f342e",
+                        "on-secondary-fixed-variant": "#476400",
+                        "tertiary-fixed": "#fdfab4",
+                        "surface-container": "#edefe8",
+                        "tertiary": "#63612b",
+                        "on-tertiary": "#fffbc8",
+                        "on-tertiary-fixed": "#4f4d19",
+                        "outline-variant": "#afb3ac",
+                        "on-secondary-fixed": "#304600",
+                        "surface-variant": "#e0e4dc",
+                        "primary": "#406843",
+                        "on-tertiary-container": "#616029",
+                        "on-background": "#2f342e",
+                        "secondary-dim": "#405b00",
+                        "on-secondary": "#f0ffce",
+                        "primary-fixed": "#c0eebf",
+                        "secondary-fixed": "#c8f17a",
+                        "on-primary-container": "#335a37",
+                        "surface-dim": "#d8dbd3",
+                        "secondary-container": "#c8f17a",
+                        "on-secondary-container": "#3f5a00",
+                        "secondary-fixed-dim": "#bae26e",
+                        "on-error": "#fff7f6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Work Sans"],
+                        "label": ["Work Sans"]
+                    },
+                    "keyframes": {
+                        "fade-in-up": {
+                            "0%": { opacity: "0", transform: "translateY(20px)" },
+                            "100%": { opacity: "1", transform: "translateY(0)" }
+                        },
+                        "confetti": {
+                            "0%": { transform: "translateY(0) rotate(0deg)", opacity: "1" },
+                            "100%": { transform: "translateY(-100px) rotate(720deg)", opacity: "0" }
+                        }
+                    },
+                    "animation": {
+                        "fade-in-up": "fade-in-up 0.6s ease-out forwards",
+                        "confetti": "confetti 0.8s ease-out forwards"
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #fafaf5;
+            color: #2f342e;
+            font-family: 'Work Sans', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Manrope', sans-serif;
+        }
+        
+        /* Custom transitions for form interactive feel */
+        .form-field-group {
+            opacity: 0;
+            animation: fade-in-up 0.6s ease-out forwards;
+        }
+        
+        .input-focus-effect {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .input-focus-effect:focus {
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(64, 104, 67, 0.08);
+            transform: translateY(-2px);
+        }
+
+        /* Floating label simulation on focus */
+        .field-container label {
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .field-container:focus-within label {
+            color: #406843;
+            transform: scale(1.05);
+        }
+
+        /* Button confetti container */
+        .confetti-piece {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #c0eebf;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none h-20 px-8 flex justify-between items-center max-w-full">
+<div class="text-2xl font-extrabold text-emerald-900 dark:text-emerald-50 font-manrope tracking-tight">Life Circle</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-600 dark:hover:text-emerald-200 transition-colors font-manrope font-bold tracking-tight" href="#">Mission</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-600 dark:hover:text-emerald-200 transition-colors font-manrope font-bold tracking-tight" href="#">Services</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-600 dark:hover:text-emerald-200 transition-colors font-manrope font-bold tracking-tight" href="#">Resources</a>
+</div>
+<button class="bg-primary hover:bg-primary-dim text-on-primary px-6 py-2.5 rounded-xl font-bold transition-all active:opacity-80 scale-95 active:scale-90">Start Now</button>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-20 px-6">
+<div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Side: Editorial Content -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<div class="inline-flex px-4 py-1.5 bg-secondary-fixed text-on-secondary-fixed rounded-full text-sm font-semibold tracking-wide w-fit animate-fade-in-up" style="animation-delay: 0.1s;">
+                Step Into The Sanctuary
+            </div>
+<h1 class="text-5xl md:text-6xl font-extrabold text-on-surface leading-[1.1] -tracking-[0.02em] animate-fade-in-up" style="animation-delay: 0.2s;">
+                Begin your journey of <span class="text-primary italic">conscious</span> growth.
+            </h1>
+<p class="text-body-lg text-on-surface-variant leading-relaxed max-w-md animate-fade-in-up" style="animation-delay: 0.3s;">
+                Our intake process is designed to be as intentional as our care. Share your story with us, and we'll reach out to find the perfect path for your family's needs.
+            </p>
+<div class="space-y-6 mt-4">
+<div class="flex items-center gap-4 group animate-fade-in-up" style="animation-delay: 0.4s;">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">chat</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">WhatsApp Integrated</h4>
+<p class="text-sm text-outline">Direct line to our care coordinators.</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group animate-fade-in-up" style="animation-delay: 0.5s;">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">24h Response Time</h4>
+<p class="text-sm text-outline">We value your time and urgency.</p>
+</div>
+</div>
+</div>
+<div class="mt-8 rounded-xl overflow-hidden shadow-sm relative animate-fade-in-up" style="animation-delay: 0.6s;">
+<img class="w-full h-64 object-cover" data-alt="Soft focused interior of a modern cozy living space with sunlight streaming through large windows onto a lush green plant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC07oql2k9AmE5MXCqQBXEDmEOqW4jDvkyH03jBnRuI5nMA9XMhx-LO4HQt6p6xFSA9GQzJJTPyP6d4X1zqjxGj59HXMllTrjp6b62w4721rLlisMk1GjmhhFL8ePwvMsB5ynDKW9UHV69IYiP76S1XmGcaaQoYSxxCDhPXYho0NVd2ALWihE_yWZOPPCHQzIiFuVsiS1KaHzIcoJD9-gk9F7KRgkQcFpQBYkvgVqHlylQ7fdKXMWsLAlWsrq7IltKZkRWjBlynoydH"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+</div>
+<!-- Right Side: The Form -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-8 md:p-12 shadow-[0_20px_40px_rgba(47,52,46,0.06)] overflow-hidden">
+<form class="space-y-8" id="enrollmentForm" onsubmit="event.preventDefault(); triggerConfetti(this);">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="field-container flex flex-col gap-2 form-field-group" style="animation-delay: 0.4s;">
+<label class="text-xs font-bold uppercase tracking-widest text-outline ml-1">Full Name</label>
+<input class="bg-surface-container-high border-none rounded-sm px-4 py-3 focus:ring-0 focus:bg-surface-container-highest focus:border-b-2 focus:border-primary transition-all placeholder:text-outline-variant input-focus-effect" placeholder="Alex Rivers" type="text"/>
+</div>
+<div class="field-container flex flex-col gap-2 form-field-group" style="animation-delay: 0.5s;">
+<label class="text-xs font-bold uppercase tracking-widest text-outline ml-1">Email Address</label>
+<input class="bg-surface-container-high border-none rounded-sm px-4 py-3 focus:ring-0 focus:bg-surface-container-highest focus:border-b-2 focus:border-primary transition-all placeholder:text-outline-variant input-focus-effect" placeholder="alex@example.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="field-container flex flex-col gap-2 form-field-group" style="animation-delay: 0.6s;">
+<label class="text-xs font-bold uppercase tracking-widest text-outline ml-1">WhatsApp Number</label>
+<div class="relative">
+<input class="w-full bg-surface-container-high border-none rounded-sm pl-12 pr-4 py-3 focus:ring-0 focus:bg-surface-container-highest focus:border-b-2 focus:border-primary transition-all placeholder:text-outline-variant input-focus-effect" placeholder="+1 (555) 000-0000" type="tel"/>
+<div class="absolute left-4 top-1/2 -translate-y-1/2 text-primary transition-transform">
+<span class="material-symbols-outlined text-lg">call</span>
+</div>
+</div>
+</div>
+<div class="field-container flex flex-col gap-2 form-field-group" style="animation-delay: 0.7s;">
+<label class="text-xs font-bold uppercase tracking-widest text-outline ml-1">Service Type</label>
+<select class="bg-surface-container-high border-none rounded-sm px-4 py-3 focus:ring-0 focus:bg-surface-container-highest focus:border-b-2 focus:border-primary transition-all appearance-none input-focus-effect">
+<option>Select a service</option>
+<option>Pediatric Consultation</option>
+<option>Growth Milestones</option>
+<option>Parental Coaching</option>
+<option>Nutrition Advocacy</option>
+</select>
+</div>
+</div>
+<div class="field-container flex flex-col gap-2 form-field-group" style="animation-delay: 0.8s;">
+<label class="text-xs font-bold uppercase tracking-widest text-outline ml-1">Optional Message</label>
+<textarea class="bg-surface-container-high border-none rounded-sm px-4 py-3 focus:ring-0 focus:bg-surface-container-highest focus:border-b-2 focus:border-primary transition-all placeholder:text-outline-variant input-focus-effect" placeholder="Tell us a little about your goals or any specific concerns..." rows="4"></textarea>
+</div>
+<div class="flex items-start gap-3 py-2 form-field-group" style="animation-delay: 0.9s;">
+<div class="flex items-center h-5">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 bg-surface-container-high cursor-pointer transition-transform hover:scale-110" id="disclaimer" type="checkbox"/>
+</div>
+<label class="text-sm text-on-surface-variant leading-tight cursor-pointer" for="disclaimer">
+                        I understand this is not medical care. Life Circle provides supportive developmental guidance and educational advocacy.
+                    </label>
+</div>
+<div class="pt-4 flex flex-col gap-6 form-field-group" style="animation-delay: 1s;">
+<button class="group relative bg-primary text-on-primary py-4 px-8 rounded-full text-lg font-bold shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 overflow-hidden" id="submitBtn">
+<span class="relative z-10">Schedule My Free Consultation 🚀</span>
+<div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</button>
+<div class="flex items-center justify-center gap-4 text-sm text-outline">
+<div class="h-[1px] flex-grow bg-outline-variant/20"></div>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                            Secure &amp; Confidential
+                        </span>
+<div class="h-[1px] flex-grow bg-outline-variant/20"></div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 w-full py-12 px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="text-xl font-black text-emerald-900 dark:text-emerald-50">Life Circle</div>
+<p class="text-xs font-work-sans uppercase tracking-widest text-stone-500">Nurturing the path of growth for each child and every parent.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h5 class="text-xs font-bold uppercase tracking-widest text-emerald-800 dark:text-emerald-400 mb-2">Company</h5>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-opacity opacity-80 hover:opacity-100 text-xs uppercase tracking-widest" href="#">Privacy Policy</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-opacity opacity-80 hover:opacity-100 text-xs uppercase tracking-widest" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-2">
+<h5 class="text-xs font-bold uppercase tracking-widest text-emerald-800 dark:text-emerald-400 mb-2">Support</h5>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-opacity opacity-80 hover:opacity-100 text-xs uppercase tracking-widest font-bold underline" href="#">Contact Support</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-opacity opacity-80 hover:opacity-100 text-xs uppercase tracking-widest" href="#">Careers</a>
+</div>
+<div class="flex flex-col gap-2">
+<h5 class="text-xs font-bold uppercase tracking-widest text-emerald-800 dark:text-emerald-400 mb-2">Social</h5>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-stone-500 hover:text-primary transition-colors cursor-pointer">public</span>
+<span class="material-symbols-outlined text-stone-500 hover:text-primary transition-colors cursor-pointer">group</span>
+<span class="material-symbols-outlined text-stone-500 hover:text-primary transition-colors cursor-pointer">chat_bubble</span>
+</div>
+<p class="text-[10px] text-stone-400 mt-4">© 2024 Life Circle. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+    function triggerConfetti(form) {
+        const btn = document.getElementById('submitBtn');
+        const rect = btn.getBoundingClientRect();
+        const colors = ['#c0eebf', '#406843', '#fdfab4', '#c8f17a'];
+        
+        for (let i = 0; i < 30; i++) {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti-piece animate-confetti';
+            confetti.style.left = (Math.random() * rect.width) + 'px';
+            confetti.style.top = '0px';
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.animationDelay = (Math.random() * 0.2) + 's';
+            btn.appendChild(confetti);
+            
+            setTimeout(() => confetti.remove(), 1000);
+        }
+        
+        btn.classList.add('scale-95');
+        setTimeout(() => btn.classList.remove('scale-95'), 150);
+        
+        console.log("Form interaction triggered!");
+    }
+</script>
+</body></html>

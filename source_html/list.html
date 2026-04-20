@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Waitlist Management | Life Circle Admin</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#c0eebf",
+                    "outline-variant": "#afb3ac",
+                    "on-primary": "#e9ffe5",
+                    "primary-dim": "#345c38",
+                    "primary-fixed": "#c0eebf",
+                    "secondary": "#4a6800",
+                    "tertiary-container": "#fdfab4",
+                    "surface-container-low": "#f3f4ee",
+                    "surface-bright": "#fafaf5",
+                    "surface": "#fafaf5",
+                    "on-primary-fixed-variant": "#3d6440",
+                    "error-dim": "#791903",
+                    "on-primary-container": "#335a37",
+                    "on-primary-fixed": "#204726",
+                    "on-secondary-fixed": "#304600",
+                    "inverse-on-surface": "#9c9d99",
+                    "secondary-fixed": "#c8f17a",
+                    "on-secondary-container": "#3f5a00",
+                    "on-tertiary": "#fffbc8",
+                    "tertiary-fixed-dim": "#efeba7",
+                    "surface-dim": "#d8dbd3",
+                    "tertiary-dim": "#575520",
+                    "background": "#fafaf5",
+                    "on-background": "#2f342e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#4f4d19",
+                    "on-surface-variant": "#5c605a",
+                    "tertiary": "#63612b",
+                    "surface-container": "#edefe8",
+                    "on-tertiary-container": "#616029",
+                    "on-error-container": "#6e1400",
+                    "inverse-primary": "#cefdcd",
+                    "error": "#a73b21",
+                    "on-secondary-fixed-variant": "#476400",
+                    "surface-container-high": "#e7e9e2",
+                    "primary-fixed-dim": "#b3e0b2",
+                    "secondary-container": "#c8f17a",
+                    "secondary-fixed-dim": "#bae26e",
+                    "on-error": "#fff7f6",
+                    "secondary-dim": "#405b00",
+                    "surface-container-highest": "#e0e4dc",
+                    "primary": "#406843",
+                    "error-container": "#fd795a",
+                    "surface-tint": "#406843",
+                    "on-tertiary-fixed-variant": "#6c6a33",
+                    "tertiary-fixed": "#fdfab4",
+                    "on-surface": "#2f342e",
+                    "on-secondary": "#f0ffce",
+                    "outline": "#787c75",
+                    "surface-variant": "#e0e4dc",
+                    "inverse-surface": "#0d0f0c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Work Sans"],
+                    "label": ["Work Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .whisper-shadow {
+            box-shadow: 0 20px 40px rgba(47, 52, 46, 0.06);
+        }
+        body {
+            background-color: #fafaf5;
+            color: #2f342e;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- SideNavBar Component -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-stone-50 dark:bg-stone-950 flex flex-col py-6 border-r border-stone-200/10 z-40">
+<div class="px-6 mb-10">
+<h1 class="text-lg font-bold text-stone-900 dark:text-stone-50 font-headline">Life Circle Admin</h1>
+<p class="text-xs text-stone-500 font-medium uppercase tracking-widest mt-1">Management Portal</p>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Dashboard -->
+<a class="flex items-center text-stone-500 dark:text-stone-400 px-4 py-3 font-medium text-sm hover:bg-stone-200 dark:hover:bg-stone-800 transition-all" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<!-- Enrollments -->
+<a class="flex items-center text-stone-500 dark:text-stone-400 px-4 py-3 font-medium text-sm hover:bg-stone-200 dark:hover:bg-stone-800 transition-all" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="person_add">person_add</span>
+                Enrollments
+            </a>
+<!-- Waitlist (ACTIVE) -->
+<a class="flex items-center bg-emerald-100 dark:bg-emerald-900/30 text-emerald-900 dark:text-emerald-100 rounded-lg mx-2 px-4 py-3 font-medium text-sm translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="hourglass_empty">hourglass_empty</span>
+                Waitlist
+            </a>
+<!-- Settings -->
+<a class="flex items-center text-stone-500 dark:text-stone-400 px-4 py-3 font-medium text-sm hover:bg-stone-200 dark:hover:bg-stone-800 transition-all" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="settings">settings</span>
+                Settings
+            </a>
+<!-- Help -->
+<a class="flex items-center text-stone-500 dark:text-stone-400 px-4 py-3 font-medium text-sm hover:bg-stone-200 dark:hover:bg-stone-800 transition-all" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="help">help</span>
+                Help
+            </a>
+</nav>
+<div class="px-4 mt-auto">
+<button class="w-full py-3 px-4 bg-primary text-on-primary rounded-xl font-bold flex items-center justify-center transition-all active:scale-95">
+<span class="material-symbols-outlined mr-2 text-lg" data-icon="file_download">file_download</span>
+                Export Data
+            </button>
+<div class="mt-6 flex items-center p-2 rounded-lg bg-surface-container">
+<img alt="Admin User" class="w-8 h-8 rounded-full object-cover mr-3" data-alt="professional portrait of a confident female administrator in a bright office setting with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5LQNaGOcqPOz1VN5N-wa0uqZuOK4C35txAy5gZ2Q2g94MqfzE6e14xC6X77WvzBp8PZlLJVOfdOO-4kmGeBHpqMhUqh1yHgIUb_lYIP1gsyIqjxkTmfO-f0UR3Ut7hLmitnkOLKzwfNve5FTCzzowvq34khXA7TmSsvw0kOui1kxyKCX1JZaByGtdjAtPd-z3rTatGD1F5pyEL2YbzICwy4EyzACwRLiMJp-SfRoXI7_C-ATLjk8qraqTEOHSYtol8f5-3tFrF8ac"/>
+<div class="overflow-hidden">
+<p class="text-xs font-bold truncate">Sarah Jenkins</p>
+<p class="text-[10px] text-on-surface-variant truncate">Lead Coordinator</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen bg-surface p-8 lg:p-12">
+<!-- Header Section -->
+<header class="mb-12">
+<div class="flex justify-between items-end">
+<div>
+<h2 class="text-4xl font-extrabold font-headline text-on-surface tracking-tight mb-2">Waitlist Management</h2>
+<p class="text-on-surface-variant max-w-xl font-body leading-relaxed">
+                        Manage prospective families and monitor service demand. Prioritize placements based on application age and family needs.
+                    </p>
+</div>
+<div class="hidden lg:flex gap-4">
+<div class="text-right">
+<p class="text-xs font-bold text-primary uppercase tracking-widest">Total Pending</p>
+<p class="text-3xl font-black font-headline">142</p>
+</div>
+<div class="h-10 w-[1px] bg-outline-variant opacity-20 self-center"></div>
+<div class="text-right">
+<p class="text-xs font-bold text-secondary uppercase tracking-widest">High Priority</p>
+<p class="text-3xl font-black font-headline">18</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Tool Bar / Filter Section -->
+<section class="mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+<div class="relative w-full md:w-96">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-high rounded-xl border-none focus:ring-0 focus:bg-surface-container-highest transition-all font-body text-sm" placeholder="Search by family name or service..." type="text"/>
+</div>
+<div class="flex items-center gap-3 w-full md:w-auto">
+<button class="flex-1 md:flex-none px-5 py-3 bg-surface-container-low text-on-surface-variant font-medium text-sm rounded-xl flex items-center justify-center hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined mr-2 text-lg" data-icon="filter_list">filter_list</span>
+                    Filter
+                </button>
+<button class="flex-1 md:flex-none px-5 py-3 bg-secondary-container text-on-secondary-container font-bold text-sm rounded-xl flex items-center justify-center hover:opacity-90 transition-all">
+<span class="material-symbols-outlined mr-2 text-lg" data-icon="add">add</span>
+                    Add Entry
+                </button>
+</div>
+</section>
+<!-- Main Waitlist Table -->
+<div class="bg-surface-container-lowest rounded-xl whisper-shadow overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-6 py-4 text-xs font-bold text-on-surface-variant uppercase tracking-widest font-label">Family Name</th>
+<th class="px-6 py-4 text-xs font-bold text-on-surface-variant uppercase tracking-widest font-label">Priority</th>
+<th class="px-6 py-4 text-xs font-bold text-on-surface-variant uppercase tracking-widest font-label">Service Requested</th>
+<th class="px-6 py-4 text-xs font-bold text-on-surface-variant uppercase tracking-widest font-label">Date Added</th>
+<th class="px-6 py-4 text-xs font-bold text-on-surface-variant uppercase tracking-widest font-label text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors group">
+<td class="px-6 py-6">
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-sm mr-3">AM</div>
+<div>
+<p class="font-bold text-on-surface">Aditi Miller</p>
+<p class="text-xs text-on-surface-variant">2 Children • Household A</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="px-3 py-1 bg-error-container/20 text-error font-bold text-[10px] uppercase tracking-wider rounded-full flex items-center w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-error mr-2"></span>
+                                High
+                            </span>
+</td>
+<td class="px-6 py-6">
+<p class="text-sm font-medium">Childcare - Infant Room</p>
+<p class="text-[10px] text-on-surface-variant">Full-time • Monday-Friday</p>
+</td>
+<td class="px-6 py-6 text-sm text-on-surface-variant font-medium">Oct 12, 2023</td>
+<td class="px-6 py-6 text-right">
+<button class="px-4 py-2 bg-primary text-on-primary rounded-xl font-bold text-xs transition-all hover:scale-105 active:scale-95">Notify</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="px-6 py-6">
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold text-sm mr-3">BC</div>
+<div>
+<p class="font-bold text-on-surface">Benjamin Chen</p>
+<p class="text-xs text-on-surface-variant">1 Child • Household B</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="px-3 py-1 bg-secondary-container/30 text-secondary font-bold text-[10px] uppercase tracking-wider rounded-full flex items-center w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mr-2"></span>
+                                Medium
+                            </span>
+</td>
+<td class="px-6 py-6">
+<p class="text-sm font-medium">Early Literacy Workshop</p>
+<p class="text-[10px] text-on-surface-variant">Hybrid Session</p>
+</td>
+<td class="px-6 py-6 text-sm text-on-surface-variant font-medium">Nov 04, 2023</td>
+<td class="px-6 py-6 text-right">
+<button class="px-4 py-2 bg-primary text-on-primary rounded-xl font-bold text-xs transition-all hover:scale-105 active:scale-95">Notify</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="px-6 py-6">
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-stone-200 text-stone-600 flex items-center justify-center font-bold text-sm mr-3">LF</div>
+<div>
+<p class="font-bold text-on-surface">Lucas Ferreira</p>
+<p class="text-xs text-on-surface-variant">3 Children • Household C</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant font-bold text-[10px] uppercase tracking-wider rounded-full flex items-center w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant mr-2"></span>
+                                Low
+                            </span>
+</td>
+<td class="px-6 py-6">
+<p class="text-sm font-medium">Summer Camp Prep</p>
+<p class="text-[10px] text-on-surface-variant">Seasonal Program</p>
+</td>
+<td class="px-6 py-6 text-sm text-on-surface-variant font-medium">Dec 18, 2023</td>
+<td class="px-6 py-6 text-right">
+<button class="px-4 py-2 bg-primary text-on-primary rounded-xl font-bold text-xs transition-all hover:scale-105 active:scale-95">Notify</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="px-6 py-6">
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-sm mr-3">SP</div>
+<div>
+<p class="font-bold text-on-surface">Sarah Peterson</p>
+<p class="text-xs text-on-surface-variant">1 Child • Household D</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="px-3 py-1 bg-error-container/20 text-error font-bold text-[10px] uppercase tracking-wider rounded-full flex items-center w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-error mr-2"></span>
+                                High
+                            </span>
+</td>
+<td class="px-6 py-6">
+<p class="text-sm font-medium">Childcare - Toddler Room</p>
+<p class="text-[10px] text-on-surface-variant">Part-time • T/Th</p>
+</td>
+<td class="px-6 py-6 text-sm text-on-surface-variant font-medium">Jan 02, 2024</td>
+<td class="px-6 py-6 text-right">
+<button class="px-4 py-2 bg-primary text-on-primary rounded-xl font-bold text-xs transition-all hover:scale-105 active:scale-95">Notify</button>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Pagination Placeholder -->
+<div class="p-6 bg-surface-container-lowest border-t border-surface-container flex items-center justify-between">
+<p class="text-xs text-on-surface-variant font-medium">Showing 1 to 10 of 142 entries</p>
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center bg-primary text-on-primary font-bold text-xs">1</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface font-bold text-xs">2</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface font-bold text-xs">3</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Insights Bento Grid -->
+<section class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 bg-primary-container rounded-xl">
+<span class="material-symbols-outlined text-on-primary-container text-3xl mb-4" data-icon="trending_up">trending_up</span>
+<h4 class="text-on-primary-container font-bold text-lg mb-1">Growth Forecast</h4>
+<p class="text-on-primary-fixed-variant text-sm leading-relaxed">Infant room demand has increased by 24% this quarter. Expansion of capacity is recommended by Q3.</p>
+</div>
+<div class="p-6 bg-tertiary-container rounded-xl">
+<span class="material-symbols-outlined text-on-tertiary-container text-3xl mb-4" data-icon="notifications_active">notifications_active</span>
+<h4 class="text-on-tertiary-container font-bold text-lg mb-1">Response Rate</h4>
+<p class="text-on-tertiary-fixed-variant text-sm leading-relaxed">Average family response time to notifications is 4.2 hours. Waitlist churn remains at record lows.</p>
+</div>
+<div class="p-6 bg-surface-container-highest rounded-xl relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-10 mix-blend-overlay" data-alt="soft focus abstract background of children's toy blocks and wooden textures in warm natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJloV7eY4UL8j1cTbOnd8spSJWYD-CllSyHX0CPCf2RipHzMjDTXWc1peSIvqMV1VbziPn6aaRtoCEENg__ctM2WXs-iGwdRJvmiDokkJ-vVAjmqsAn8t48tRMaSkZ6rG62YD5PkOcafvYwEvBtQStvVNK3ml-ptkNdmCVWsYpmWlzrIZaCjN0iaVphwrIy185XvwLDeIWQ0vi0rZgzwM2EoK7A1zIag3Qwmnlo5dZ6QmMFKcUuB0poWpzS-pS74OgmpVpIkJ6J2jN"/>
+<span class="material-symbols-outlined text-on-surface text-3xl mb-4" data-icon="auto_awesome">auto_awesome</span>
+<h4 class="text-on-surface font-bold text-lg mb-1">Smart Match</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Three families on the current list match the upcoming vacancy in the Toddler Room. Review eligibility.</p>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="ml-64 bg-stone-100 dark:bg-stone-950 w-full py-12 px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-2">
+<h3 class="text-xl font-black text-emerald-900 dark:text-emerald-50 font-headline mb-4">Life Circle</h3>
+<p class="text-stone-500 dark:text-stone-400 font-body text-sm max-w-sm">
+                    Empowering families through intentional care and professional management. Our sanctuary for growth starts with trust.
+                </p>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase tracking-widest text-emerald-800 dark:text-emerald-400 mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a class="text-xs uppercase tracking-widest text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-opacity" href="#">Privacy Policy</a></li>
+<li><a class="text-xs uppercase tracking-widest text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-opacity" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase tracking-widest text-emerald-800 dark:text-emerald-400 mb-4">Support</h4>
+<ul class="space-y-2">
+<li><a class="text-xs uppercase tracking-widest text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-opacity" href="#">Contact Support</a></li>
+<li><a class="text-xs uppercase tracking-widest text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-opacity" href="#">Careers</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-stone-200/20 flex justify-between items-center">
+<p class="text-[10px] text-stone-500 uppercase tracking-widest">© 2024 Life Circle. All rights reserved.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-stone-400 text-lg cursor-pointer hover:text-primary transition-colors" data-icon="language">language</span>
+<span class="material-symbols-outlined text-stone-400 text-lg cursor-pointer hover:text-primary transition-colors" data-icon="lock">lock</span>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Life Circle | Help &amp; Documentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#c0eebf",
+                        "outline-variant": "#afb3ac",
+                        "on-primary": "#e9ffe5",
+                        "primary-dim": "#345c38",
+                        "primary-fixed": "#c0eebf",
+                        "secondary": "#4a6800",
+                        "tertiary-container": "#fdfab4",
+                        "surface-container-low": "#f3f4ee",
+                        "surface-bright": "#fafaf5",
+                        "surface": "#fafaf5",
+                        "on-primary-fixed-variant": "#3d6440",
+                        "error-dim": "#791903",
+                        "on-primary-container": "#335a37",
+                        "on-primary-fixed": "#204726",
+                        "on-secondary-fixed": "#304600",
+                        "inverse-on-surface": "#9c9d99",
+                        "secondary-fixed": "#c8f17a",
+                        "on-secondary-container": "#3f5a00",
+                        "on-tertiary": "#fffbc8",
+                        "tertiary-fixed-dim": "#efeba7",
+                        "surface-dim": "#d8dbd3",
+                        "tertiary-dim": "#575520",
+                        "background": "#fafaf5",
+                        "on-background": "#2f342e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#4f4d19",
+                        "on-surface-variant": "#5c605a",
+                        "tertiary": "#63612b",
+                        "surface-container": "#edefe8",
+                        "on-tertiary-container": "#616029",
+                        "on-error-container": "#6e1400",
+                        "inverse-primary": "#cefdcd",
+                        "error": "#a73b21",
+                        "on-secondary-fixed-variant": "#476400",
+                        "surface-container-high": "#e7e9e2",
+                        "primary-fixed-dim": "#b3e0b2",
+                        "secondary-container": "#c8f17a",
+                        "secondary-fixed-dim": "#bae26e",
+                        "on-error": "#fff7f6",
+                        "secondary-dim": "#405b00",
+                        "surface-container-highest": "#e0e4dc",
+                        "primary": "#406843",
+                        "error-container": "#fd795a",
+                        "surface-tint": "#406843",
+                        "on-tertiary-fixed-variant": "#6c6a33",
+                        "tertiary-fixed": "#fdfab4",
+                        "on-surface": "#2f342e",
+                        "on-secondary": "#f0ffce",
+                        "outline": "#787c75",
+                        "surface-variant": "#e0e4dc",
+                        "inverse-surface": "#0d0f0c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Work Sans"],
+                        "label": ["Work Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #fafaf5;
+            color: #2f342e;
+        }
+        .glass-nav {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar (Suppressed for focused help screen as per shell rules, using SideNavBar as a guide for internal structure but keeping main layout focused) -->
+<aside class="hidden md:flex h-screen w-64 fixed left-0 top-0 bg-stone-50 border-r border-stone-200/10 flex-col py-6">
+<div class="px-6 mb-8">
+<h1 class="text-lg font-bold text-stone-900">Life Circle Admin</h1>
+<p class="text-xs text-stone-500">Management Portal</p>
+</div>
+<nav class="flex-1 space-y-1 px-2">
+<a class="flex items-center gap-3 text-stone-500 px-4 py-3 hover:bg-stone-200 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-stone-500 px-4 py-3 hover:bg-stone-200 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person_add">person_add</span>
+<span class="font-medium">Enrollments</span>
+</a>
+<a class="flex items-center gap-3 text-stone-500 px-4 py-3 hover:bg-stone-200 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="hourglass_empty">hourglass_empty</span>
+<span class="font-medium">Waitlist</span>
+</a>
+<a class="flex items-center gap-3 text-stone-500 px-4 py-3 hover:bg-stone-200 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-medium">Settings</span>
+</a>
+<a class="flex items-center gap-3 bg-emerald-100 text-emerald-900 px-4 py-3 rounded-lg mx-2 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-medium">Help</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full bg-primary text-on-primary py-2 px-4 rounded-xl font-medium transition-all active:opacity-80">Export Data</button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 min-h-screen">
+<!-- Top Navigation Area -->
+<header class="fixed top-0 md:left-64 right-0 z-50 glass-nav h-20 flex items-center justify-between px-8">
+<div class="flex flex-col">
+<h2 class="font-headline font-extrabold text-2xl text-emerald-900 tracking-tight">Resources</h2>
+<span class="text-xs text-on-surface-variant uppercase tracking-widest font-label font-medium">Knowledge Base</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex bg-surface-container-high px-4 py-2 rounded-full items-center gap-2">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder:text-outline-variant" placeholder="Search documentation..." type="text"/>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2.5 rounded-full font-headline font-bold text-sm transition-all hover:opacity-90">Start Now</button>
+</div>
+</header>
+<div class="pt-32 pb-20 px-8 max-w-7xl mx-auto">
+<!-- Hero Introduction -->
+<section class="mb-16">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<h3 class="font-headline text-5xl font-extrabold text-on-surface leading-tight mb-6">Documentation <br/>&amp; Learning Center</h3>
+<p class="text-body text-lg text-on-surface-variant leading-relaxed mb-8 max-w-xl">
+                            Welcome to the Life Circle sanctuary for information. Find comprehensive guides tailored to your journey, from technical setups to daily operational success.
+                        </p>
+<div class="flex flex-wrap gap-3">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">Tutorials</span>
+<span class="bg-primary-container text-on-primary-container px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">API Docs</span>
+<span class="bg-tertiary-container text-on-tertiary-container px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">Community</span>
+</div>
+</div>
+<div class="relative h-64 lg:h-96 rounded-3xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Modern clean workspace with a laptop, open notebook, and a small green plant reflecting a calm learning environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXIC_Mvp9IQrbz2QEA2wHyg3sNWMrZ4Bq-k2f4KsiPAQsAN3z1XjrFnpF-af-qT6NAG_-X3OJKjq7avZvMFqg46pcJs06mjVOvwWU3Id5vQGnhoSCJElRQEqVN2AkDOdQcUPcyY4opLidc1sLnjkoB7mlcTQ2uPVip2dRYk_PEc8_N8vouV06jYfGzPK4L-sARR7rmQRAENjVtRCXhmF6yOfqiuDipKw1xYjlLENEek3aRsoWil45T_JxXjiwNvJctKIJ59zHSDnA_"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+</div>
+</section>
+<!-- Documentation Grid -->
+<section>
+<div class="flex items-baseline justify-between mb-10">
+<h4 class="font-headline text-2xl font-bold text-emerald-900">System Guides</h4>
+<a class="text-primary font-bold text-sm hover:underline decoration-2 underline-offset-4" href="#">Browse all documents</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Card: Installation Guide -->
+<div class="bg-surface-container-lowest p-8 rounded-xl transition-all hover:translate-y-[-4px] group" style="box-shadow: 0 20px 40px rgba(47, 52, 46, 0.04);">
+<div class="flex justify-between items-start mb-6">
+<div class="w-14 h-14 bg-primary-container rounded-2xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="download_for_offline">download_for_offline</span>
+</div>
+<span class="text-xs font-bold text-outline-variant font-label">v2.4.0</span>
+</div>
+<h5 class="font-headline text-xl font-bold text-on-surface mb-3">Installation Guide</h5>
+<p class="text-body text-on-surface-variant mb-8 line-clamp-2">Step-by-step walkthrough for deploying the Life Circle ecosystem across your local and cloud infrastructure.</p>
+<button class="flex items-center gap-2 text-primary font-bold transition-all group-hover:gap-4">
+                            View Document <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Card: Quick Reference -->
+<div class="bg-surface-container-lowest p-8 rounded-xl transition-all hover:translate-y-[-4px] group" style="box-shadow: 0 20px 40px rgba(47, 52, 46, 0.04);">
+<div class="flex justify-between items-start mb-6">
+<div class="w-14 h-14 bg-secondary-container rounded-2xl flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl" data-icon="bolt">bolt</span>
+</div>
+<span class="text-xs font-bold text-outline-variant font-label">Cheat Sheet</span>
+</div>
+<h5 class="font-headline text-xl font-bold text-on-surface mb-3">Quick Reference</h5>
+<p class="text-body text-on-surface-variant mb-8 line-clamp-2">Essential commands, keyboard shortcuts, and configuration snippets for power users and administrators.</p>
+<button class="flex items-center gap-2 text-primary font-bold transition-all group-hover:gap-4">
+                            View Document <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Card: Project Summary -->
+<div class="bg-surface-container-lowest p-8 rounded-xl transition-all hover:translate-y-[-4px] group" style="box-shadow: 0 20px 40px rgba(47, 52, 46, 0.04);">
+<div class="flex justify-between items-start mb-6">
+<div class="w-14 h-14 bg-tertiary-container rounded-2xl flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-3xl" data-icon="summarize">summarize</span>
+</div>
+<span class="text-xs font-bold text-outline-variant font-label">Executive</span>
+</div>
+<h5 class="font-headline text-xl font-bold text-on-surface mb-3">Project Summary</h5>
+<p class="text-body text-on-surface-variant mb-8 line-clamp-2">High-level overview of system goals, architecture decisions, and upcoming roadmap milestones for stakeholders.</p>
+<button class="flex items-center gap-2 text-primary font-bold transition-all group-hover:gap-4">
+                            View Document <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Card: User Manual -->
+<div class="bg-surface-container-lowest p-8 rounded-xl transition-all hover:translate-y-[-4px] group" style="box-shadow: 0 20px 40px rgba(47, 52, 46, 0.04);">
+<div class="flex justify-between items-start mb-6">
+<div class="w-14 h-14 bg-primary-container rounded-2xl flex items-center justify-center text-primary" style="background-color: #e9ffe5;">
+<span class="material-symbols-outlined text-3xl" data-icon="menu_book">menu_book</span>
+</div>
+<span class="text-xs font-bold text-outline-variant font-label">Onboarding</span>
+</div>
+<h5 class="font-headline text-xl font-bold text-on-surface mb-3">User Manual</h5>
+<p class="text-body text-on-surface-variant mb-8 line-clamp-2">Comprehensive guide for end-users, covering features, navigation, and collaborative workflows within the portal.</p>
+<button class="flex items-center gap-2 text-primary font-bold transition-all group-hover:gap-4">
+                            View Document <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Support Section (Bento Style) -->
+<section class="mt-24 bg-surface-container-low rounded-3xl p-10 relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
+<div class="lg:col-span-2">
+<h4 class="font-headline text-3xl font-extrabold text-emerald-900 mb-4">Still need assistance?</h4>
+<p class="text-body text-on-surface-variant mb-8 max-w-md">Our support specialists are here to help you navigate any challenges. Connect with us via chat, email, or schedule a 1:1 onboarding session.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="forum">forum</span> Live Support
+                            </button>
+<button class="bg-surface-container-lowest text-primary px-8 py-3 rounded-xl font-bold border border-primary/10">
+                                Contact Email
+                            </button>
+</div>
+</div>
+<div class="flex items-center justify-center">
+<div class="w-40 h-40 bg-white/40 backdrop-blur-md rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-7xl text-emerald-800" data-icon="support_agent">support_agent</span>
+</div>
+</div>
+</div>
+<!-- Decorative Circle -->
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-secondary-fixed opacity-20 rounded-full"></div>
+</section>
+</div>
+<!-- Footer -->
+<footer class="bg-stone-100 py-12 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<h1 class="text-xl font-black text-emerald-900 mb-4">Life Circle</h1>
+<p class="text-xs font-label text-stone-500 uppercase tracking-widest leading-loose">Empowering Growth through Connection and Sanctuary.</p>
+</div>
+<div>
+<h6 class="text-xs font-bold text-stone-900 uppercase tracking-widest mb-4">Legal</h6>
+<ul class="space-y-2">
+<li><a class="text-stone-500 text-xs hover:text-emerald-700 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-stone-500 text-xs hover:text-emerald-700 transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-xs font-bold text-stone-900 uppercase tracking-widest mb-4">Support</h6>
+<ul class="space-y-2">
+<li><a class="text-stone-500 text-xs hover:text-emerald-700 transition-colors" href="#">Contact Support</a></li>
+<li><a class="text-stone-500 text-xs hover:text-emerald-700 transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-xs font-bold text-stone-900 uppercase tracking-widest mb-4">Connect</h6>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-emerald-700" data-icon="public">public</span>
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-emerald-700" data-icon="mail">mail</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto border-t border-stone-200 mt-12 pt-8 text-center">
+<p class="text-xs font-label text-stone-400 uppercase tracking-widest">© 2024 Life Circle. All rights reserved.</p>
+</div>
+</footer>
+</main>
+</body></html>

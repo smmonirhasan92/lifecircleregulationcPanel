@@ -1,0 +1,3 @@
+Added the database “lifecirc_database-01”.
+user name : Siradmin
+Passward:Sir@@@123@@
