@@ -11,19 +11,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = sanitize($_POST['email']);
     $password = $_POST['password'];
 
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ? AND role = 'admin'");
-    $stmt->execute([$email]);
-    $user = $stmt->fetch();
+    try {
+        $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ? AND role = 'admin'");
+        $stmt->execute([$email]);
+        $user = $stmt->fetch();
 
-    if ($user && password_verify($password, $user->password)) {
-        $_SESSION['user_id'] = $user->id;
-        $_SESSION['user_role'] = 'admin';
-        $_SESSION['user_name'] = $user->name;
-        
-        set_flash('success', 'Admin login successful.');
-        redirect('index.php');
-    } else {
-        $error = 'Invalid admin credentials.';
+        if ($user && password_verify($password, $user->password)) {
+            $_SESSION['user_id'] = $user->id;
+            $_SESSION['user_role'] = 'admin';
+            $_SESSION['user_name'] = $user->name;
+            
+            set_flash('success', 'Admin login successful.');
+            redirect('index.php');
+        } else {
+            $error = 'Invalid admin credentials.';
+        }
+    } catch (PDOException $e) {
+        $error = 'Database error: ' . $e->getMessage();
+        if (strpos($e->getMessage(), "Unknown column 'role'") !== false) {
+            $error = 'Database missing "role" column. Please run the migration SQL provided.';
+        }
     }
 }
 ?>
