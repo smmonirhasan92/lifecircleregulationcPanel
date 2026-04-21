@@ -6,8 +6,8 @@
 
 // Database Configuration
 define('DB_HOST', '127.0.0.1'); // Better compatibility for some cPanel hosts
-define('DB_NAME', 'lifecirc_PHP');
-define('DB_USER', 'lifecirc_adminlcr');
+define('DB_NAME', 'lifecircleregula_PHP');
+define('DB_USER', 'lifecircleregula_adminlcr');
 define('DB_PASS', 'Sir@@@@123@@');
 
 // Site Information
