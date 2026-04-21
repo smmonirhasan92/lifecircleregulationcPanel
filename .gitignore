@@ -1,16 +1,24 @@
 # Life Circle Raw PHP - Git Ignore
 # -----------------------------
 
+# Database & SQL
+*.sql
+*.bd
+*.txt
+
+# Development Configurations
+webpack.mix.js
+.editorconfig
+.styleci.yml
+.gitattributes
+
 # Backups & Laravel Leftovers
 laravel_original_files/
 vendor/
 storage/
 node_modules/
 .env
-project.zip
-project_COMPLETE.zip
-project_final.zip
-vendor_only.zip
+*.zip
 
 # IDE/System
 .vscode/
@@ -18,7 +26,7 @@ vendor_only.zip
 .DS_Store
 Thumbs.db
 
-# Scratch files
+# Build/Workflow
 scratch/
 tests/
 phpunit.xml
