@@ -5,10 +5,10 @@
  */
 
 // Database Configuration
-define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'lifecirc_database-01');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_HOST', 'localhost'); // Usually localhost in cPanel
+define('DB_NAME', 'lifecirc_PHP');
+define('DB_USER', 'lifecirc_adminlcr');
+define('DB_PASS', 'Sir@@@@123@@');
 
 // Site Information
 define('BASE_PATH', dirname(__DIR__));
