@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/lifecirc/public_html
+    - export DEPLOYPATH=/home/lifecircleregula/public_html
     - /bin/cp -r admin $DEPLOYPATH
     - /bin/cp -r assets $DEPLOYPATH
     - /bin/cp -r includes $DEPLOYPATH
