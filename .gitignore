@@ -1,14 +1,31 @@
-/node_modules
-/public/hot
-/public/storage
-/storage/*.key
+# Life Circle Raw PHP - Git Ignore
+# -----------------------------
+
+# Backups & Laravel Leftovers
+laravel_original_files/
+vendor/
+storage/
+node_modules/
 .env
-.env.backup
-.phpunit.result.cache
-docker-compose.override.yml
-Homestead.json
-Homestead.yaml
-npm-debug.log
-yarn-error.log
-/.idea
-/.vscode
+project.zip
+project_COMPLETE.zip
+project_final.zip
+vendor_only.zip
+
+# IDE/System
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Scratch files
+scratch/
+tests/
+phpunit.xml
+vite.config.js
+tailwind.config.js
+package.json
+package-lock.json
+composer.json
+composer.lock
+artisan

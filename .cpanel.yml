@@ -1,6 +1,9 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/lifecirc/public_html/portal/
-    - /bin/mkdir -p $DEPLOYPATH
-    - /bin/cp -r * $DEPLOYPATH
+    - export DEPLOYPATH=/home/lifecirc/public_html
+    - /bin/cp -r admin $DEPLOYPATH
+    - /bin/cp -r assets $DEPLOYPATH
+    - /bin/cp -r includes $DEPLOYPATH
+    - /bin/cp *.php $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
