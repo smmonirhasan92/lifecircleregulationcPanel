@@ -5,7 +5,7 @@
  */
 
 // Database Configuration
-define('DB_HOST', 'localhost'); // Usually localhost in cPanel
+define('DB_HOST', '127.0.0.1'); // Better compatibility for some cPanel hosts
 define('DB_NAME', 'lifecirc_PHP');
 define('DB_USER', 'lifecirc_adminlcr');
 define('DB_PASS', 'Sir@@@@123@@');
