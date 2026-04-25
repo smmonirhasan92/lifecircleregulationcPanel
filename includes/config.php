@@ -4,15 +4,26 @@
  * Raw PHP Migration
  */
 
-// Database Configuration
-define('DB_HOST', '127.0.0.1'); // Better compatibility for some cPanel hosts
-define('DB_NAME', 'lifecircleregula_PHP');
-define('DB_USER', 'lifecircleregula_adminlcr');
-define('DB_PASS', 'Sir@@@@123@@');
+// Environment Detection
+$is_local = ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_ADDR'] === '127.0.0.1');
+
+if ($is_local) {
+    define('DB_HOST', '127.0.0.1'); 
+    define('DB_NAME', 'lifecirc_database-01');
+    define('DB_USER', 'root');
+    define('DB_PASS', '');
+    define('SITE_URL', 'http://localhost:8000');
+} else {
+    // Production Settings (cPanel)
+    define('DB_HOST', 'localhost');
+    define('DB_NAME', 'smmonirh_lifecircleregulation'); // Updated with cPanel prefix
+    define('DB_USER', 'smmonirh_lifecircleregulation');
+    define('DB_PASS', 'your_prod_password_here'); // User will need to ensure this matches
+    define('SITE_URL', 'https://lifecircleregulation.com');
+}
 
 // Site Information
 define('BASE_PATH', dirname(__DIR__));
-define('SITE_URL', 'http://localhost:8000'); // Set to your live domain when deploying
 
 // WhatsApp Contact (Sharmin Mujahid Mam)
 define('MAM_WHATSAPP', '8801716437859');
@@ -25,7 +36,13 @@ try {
         PDO::ATTR_EMULATE_PREPARES => false,
     ]);
 } catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
+    // If production fails, don't die immediately to avoid exposing info, but log it
+    if ($is_local) {
+        die("Database connection failed: " . $e->getMessage());
+    } else {
+        error_log("DB Connection Error: " . $e->getMessage());
+        die("Site is currently undergoing maintenance. Please try again later.");
+    }
 }
 
 // Start Session

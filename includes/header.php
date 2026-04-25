@@ -30,22 +30,27 @@
                     "colors": {
                         "primary": "#1b4332", 
                         "on-primary": "#ffffff",
-                        "primary-container": "#d8e2dc",
-                        "secondary": "#2d6a4f",
-                        "secondary-container": "#95d5b2",
-                        "background": "#fdfaf5", 
-                        "surface": "#fdfaf5",
-                        "surface-container-low": "#f7f2ea",
-                        "surface-container": "#f0ede5",
+                        "primary-container": "#f0f4f1",
+                        "secondary": "#527853",
+                        "secondary-container": "#e9c46a",
+                        "background": "#fdfcf0", 
+                        "surface": "#ffffff",
+                        "surface-container-low": "#f9f7f2",
+                        "surface-container": "#f1f3ed",
                         "on-surface": "#1b4332",
                         "on-surface-variant": "#405d4b",
-                        "outline": "#787c75"
+                        "outline": "#787c75",
+                        "blush": "#ffb5a7"
                     },
                     "fontFamily": {
                         "headline": ["Manrope"],
                         "body": ["Work Sans"],
                         "label": ["Work Sans"],
                         "bengali": ["Hind Siliguri", "sans-serif"]
+                    },
+                    "boxShadow": {
+                        "whisper": "0 10px 40px rgba(27, 67, 50, 0.05)",
+                        "premium": "0 20px 60px rgba(27, 67, 50, 0.08)"
                     }
                 },
             },
@@ -71,18 +76,19 @@
         }
 
         .whisper-shadow {
-            box-shadow: 0 20px 40px rgba(27, 67, 50, 0.04);
+            box-shadow: 0 10px 40px rgba(27, 67, 50, 0.05);
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         body {
             font-family: 'Work Sans', sans-serif;
-            background-color: #fdfaf5;
+            background-color: #fdfcf0;
             color: #1b4332;
         }
 
         h1, h2, h3 {
             font-family: 'Manrope', sans-serif;
+            letter-spacing: -0.02em;
         }
 
         .material-symbols-outlined {
@@ -103,7 +109,7 @@
 
         nav.scrolled {
             height: 4.5rem;
-            background-color: rgba(253, 250, 245, 0.9);
+            background-color: rgba(253, 252, 240, 0.9);
             backdrop-filter: blur(12px);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
         }
@@ -115,7 +121,7 @@
         }
     </style>
 </head>
-<body class="bg-surface text-on-surface selection:bg-secondary-container">
+<body class="bg-surface text-on-surface selection:bg-secondary-container/30">
 
     <!-- Flash Messages -->
     <?php if ($error = get_flash('error')): ?>
@@ -133,16 +139,19 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 transition-all duration-500 organic-easing h-16 md:h-24 flex justify-between items-center px-4 md:px-8 lg:px-16 max-w-full" id="topNav">
         <div class="flex items-center gap-2 md:gap-3">
-            <img alt="Life Circle Logo" class="h-8 w-8 md:h-12 md:w-12 object-contain" src="assets/logo.png">
-            <div class="flex flex-col">
-                <span class="text-base md:text-xl font-extrabold text-primary font-manrope leading-tight uppercase tracking-tight">Life Circle</span>
-                <span class="text-[7px] md:text-[10px] text-secondary font-bold tracking-tighter uppercase">Counseling Services</span>
-            </div>
+            <a href="index.php" class="flex items-center gap-2 md:gap-3">
+                <img alt="Life Circle Logo" class="h-8 w-8 md:h-12 md:w-12 object-contain" src="assets/logo.png">
+                <div class="flex flex-col">
+                    <span class="text-base md:text-xl font-extrabold text-primary font-manrope leading-tight uppercase tracking-tight">Life Circle</span>
+                    <span class="text-[7px] md:text-[10px] text-secondary font-bold tracking-tighter uppercase">Counseling Services</span>
+                </div>
+            </a>
         </div>
         <div class="hidden md:flex items-center gap-8 font-manrope font-bold tracking-tight">
-            <a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="index.php#about">About</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="index.php#services">Services</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="index.php#contact">Contact</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="about.php">About Us</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="services.php">Services</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="gallery.php">Gallery</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="contact.php">Contact</a>
             
             <?php if (is_logged_in()): ?>
                 <?php if (is_admin()): ?>
@@ -158,7 +167,7 @@
                 <a class="text-secondary bg-secondary/5 px-4 py-2 rounded-full hover:bg-secondary/10 transition-all text-sm font-bold" href="register.php">Register</a>
             <?php endif; ?>
         </div>
-        <a href="enroll.php" class="btn-interact bg-primary text-on-primary px-3 md:px-6 py-1.5 md:py-2.5 rounded-full font-manrope font-bold hover:brightness-110 shadow-lg text-[9px] md:text-base whitespace-nowrap font-bengali">
+        <a href="enroll.php" class="btn-interact bg-primary text-on-primary px-3 md:px-6 py-1.5 md:py-2.5 rounded-full font-manrope font-bold hover:brightness-110 shadow-premium text-[9px] md:text-base whitespace-nowrap font-bengali">
             DMC কোর্সে ভর্তি হোন
         </a>
     </nav>
