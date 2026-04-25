@@ -27,7 +27,7 @@ $early_bird_deadline = get_setting('early_bird_deadline');
                         Book Appointment
                         <span class="material-symbols-outlined text-xl">calendar_month</span>
                     </button>
-                    <button onclick="openModal('enroll')" class="btn-interact px-10 py-5 bg-white text-primary border-2 border-primary/10 rounded-2xl font-bold text-lg hover:bg-primary/5">
+                    <button onclick="openModal('enroll')" class="btn-interact px-10 py-5 bg-secondary text-white rounded-2xl font-bold text-lg shadow-premium">
                         Enroll Now
                     </button>
                 </div>
@@ -329,15 +329,20 @@ $early_bird_deadline = get_setting('early_bird_deadline');
                         <option value="DMC Certificate Course">DMC Certificate Course</option>
                     </select>
                 </div>
-                <div id="appointmentSpecifics" class="hidden grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-sm font-bold text-primary mb-2 ml-2">Preferred Date</label>
-                        <input type="date" name="appointment_date" class="w-full px-6 py-4 rounded-2xl bg-surface-container border-none focus:ring-2 focus:ring-primary/20">
+                        <label class="block text-sm font-bold text-primary mb-2 ml-2">Email Address</label>
+                        <input type="email" name="email" required class="w-full px-6 py-4 rounded-2xl bg-surface-container border-none focus:ring-2 focus:ring-primary/20" placeholder="e.g. name@example.com">
                     </div>
                     <div>
-                        <label class="block text-sm font-bold text-primary mb-2 ml-2">Transaction ID (Initial Booking)</label>
-                        <input type="text" name="transaction_id" class="w-full px-6 py-4 rounded-2xl bg-surface-container border-none focus:ring-2 focus:ring-primary/20" placeholder="bKash/Nagad Ref">
+                        <label class="block text-sm font-bold text-primary mb-2 ml-2">Transaction ID (Payment)</label>
+                        <input type="text" name="transaction_id" required class="w-full px-6 py-4 rounded-2xl bg-surface-container border-none focus:ring-2 focus:ring-primary/20" placeholder="bKash/Nagad Ref">
                     </div>
+                </div>
+
+                <div id="dateField" class="hidden">
+                    <label class="block text-sm font-bold text-primary mb-2 ml-2">Preferred Date</label>
+                    <input type="date" name="appointment_date" class="w-full px-6 py-4 rounded-2xl bg-surface-container border-none focus:ring-2 focus:ring-primary/20">
                 </div>
                 <div>
                     <label class="block text-sm font-bold text-primary mb-2 ml-2">Message (Optional)</label>

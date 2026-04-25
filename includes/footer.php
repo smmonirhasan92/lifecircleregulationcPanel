@@ -104,12 +104,26 @@
             }
         });
 
-        const reviewsSwiper = new Swiper('.reviewsSwiper', {
+        const socialSwiper = new Swiper('.socialSwiper', {
             slidesPerView: 'auto',
+            spaceBetween: 30,
+            loop: true,
+            autoplay: { delay: 6000 }
+        });
+
+        const reviewsSwiper = new Swiper('.reviewsSwiper', {
+            slidesPerView: 1,
             spaceBetween: 40,
             centeredSlides: false,
             loop: true,
-            autoplay: { delay: 5000 }
+            autoplay: { delay: 5000 },
+            navigation: {
+                nextEl: '.swiper-next-reviews',
+                prevEl: '.swiper-prev-reviews',
+            },
+            breakpoints: {
+                768: { slidesPerView: 1 }
+            }
         });
 
         // Counter Animation
@@ -150,7 +164,7 @@
             const title = document.getElementById('modalTitle');
             const icon = document.getElementById('modalIcon');
             const desc = document.getElementById('modalDesc');
-            const specifics = document.getElementById('appointmentSpecifics');
+            const dateField = document.getElementById('dateField');
             const form = document.getElementById('modalForm');
 
             modal.classList.remove('hidden');
@@ -162,12 +176,12 @@
                 title.innerText = 'Book Appointment';
                 icon.innerText = 'event_available';
                 desc.innerText = 'Schedule a professional counseling session.';
-                specifics.classList.remove('hidden');
+                dateField.classList.remove('hidden');
             } else {
                 title.innerText = 'Enroll in Program';
                 icon.innerText = 'school';
                 desc.innerText = 'Join our developmental support programs.';
-                specifics.classList.add('hidden');
+                dateField.classList.add('hidden');
             }
             document.body.style.overflow = 'hidden';
         }
