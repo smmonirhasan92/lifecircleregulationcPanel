@@ -57,42 +57,49 @@
     </script>
 
     <style>
-            color: #1b4332;
+        :root { scroll-behavior: smooth; }
+        body { background-color: #fdfcf0; font-family: 'Work Sans', sans-serif; color: #1b4332; overflow-x: hidden; }
+        
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; letter-spacing: -0.02em; }
+
+        /* Glassmorphism Navigation */
+        nav { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        nav.scrolled { 
+            height: 4.5rem; 
+            background: rgba(253, 252, 240, 0.85); 
+            backdrop-filter: blur(20px); 
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); 
         }
 
-        h1, h2, h3 {
-            font-family: 'Manrope', sans-serif;
-            letter-spacing: -0.02em;
-        }
+        /* Interactive Elements */
+        .btn-interact { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; }
+        .btn-interact:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(27, 67, 50, 0.2); }
+        .btn-interact:active { transform: scale(0.95); }
 
-        .material-symbols-outlined {
-            font-family: 'Material Symbols Outlined' !important;
-            font-weight: normal;
-            font-style: normal;
-            font-size: 24px;
-            line-height: 1;
-            display: inline-block;
-            white-space: nowrap;
-            word-wrap: normal;
-            direction: ltr;
-            -webkit-font-feature-settings: 'liga';
-            -webkit-font-smoothing: antialiased;
-            text-rendering: optimizeLegibility;
-            font-feature-settings: 'liga';
-        }
+        /* Modal Styles */
+        .modal-enter { opacity: 0; transform: scale(0.95); transition: all 0.3s ease-out; }
+        .modal-visible { opacity: 1; transform: scale(1); }
 
-        nav.scrolled {
-            height: 4.5rem;
-            background-color: rgba(253, 252, 240, 0.9);
-            backdrop-filter: blur(12px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        /* Robust Entrance Animations (No Scroll Required) */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .btn-interact {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
         }
-        .btn-interact:active {
-            transform: scale(0.95);
+        .animate-fade-in-up { animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+        .animate-fade-in-right { animation: fadeInRight 1s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+        
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
         }
+        .animate-bounce-slow { animation: bounce-slow 4s ease-in-out infinite; }
+
+        /* Custom Swiper Styles */
+        .swiper-pagination-bullet-active { background: #1b4332 !important; }
     </style>
 </head>
 <body class="bg-surface text-on-surface selection:bg-secondary-container/30">
