@@ -23,8 +23,8 @@
                 <p class="text-on-surface-variant text-lg leading-relaxed mb-8">
                     We provide thorough evaluations to understand your child's current developmental stage. This includes identifying strengths, challenges, and creating a personalized roadmap for growth in communication, social skills, and behavior.
                 </p>
-                <a href="appointment.php" class="text-secondary font-bold inline-flex items-center gap-2 hover:gap-4 transition-all">
-                    Book Assessment <span class="material-symbols-outlined">arrow_forward</span>
+                <a href="appointment.php" class="btn-interact inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-2xl font-bold shadow-premium">
+                    Book Assessment <span class="material-symbols-outlined text-lg">arrow_forward</span>
                 </a>
             </div>
         </div>
@@ -40,8 +40,8 @@
                 <p class="text-on-surface-variant text-lg leading-relaxed mb-8">
                     Supporting a child with developmental challenges requires a strong, informed support system at home. We provide parents with practical strategies, emotional support, and tools to foster a positive environment for their child's daily growth.
                 </p>
-                <a href="appointment.php" class="text-secondary font-bold inline-flex items-center gap-2 hover:gap-4 transition-all">
-                    Schedule Session <span class="material-symbols-outlined">arrow_forward</span>
+                <a href="appointment.php" class="btn-interact inline-flex items-center gap-3 bg-secondary text-white px-8 py-4 rounded-2xl font-bold shadow-premium">
+                    Schedule Session <span class="material-symbols-outlined text-lg">arrow_forward</span>
                 </a>
             </div>
         </div>
@@ -57,10 +57,14 @@
                 <p class="text-on-surface-variant text-lg leading-relaxed mb-8">
                     Our behavior management strategies are child-centered and positive. We work to understand the "why" behind challenging behaviors and implement evidence-based techniques that help children regulate their emotions and interact more effectively.
                 </p>
-                <a href="appointment.php" class="text-secondary font-bold inline-flex items-center gap-2 hover:gap-4 transition-all">
-                    Learn More <span class="material-symbols-outlined">arrow_forward</span>
+                <a href="appointment.php" class="btn-interact inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-2xl font-bold shadow-premium">
+                    Learn More <span class="material-symbols-outlined text-lg">arrow_forward</span>
                 </a>
             </div>
+        <div class="pt-24 text-center">
+            <a href="index.php" class="btn-interact inline-flex items-center gap-3 bg-white text-primary border-2 border-primary/10 px-10 py-5 rounded-2xl font-bold text-lg shadow-whisper">
+                <span class="material-symbols-outlined">home</span> Back to Home
+            </a>
         </div>
     </div>
 </section>

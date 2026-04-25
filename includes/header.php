@@ -118,7 +118,8 @@
     <?php endif; ?>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 transition-all duration-500 organic-easing h-16 md:h-24 flex justify-between items-center px-4 md:px-8 lg:px-16 max-w-full" id="topNav">
+    <nav class="fixed top-0 w-full z-50 transition-all duration-500 organic-easing h-16 md:h-24 bg-white/80 backdrop-blur-xl border-b border-primary/5 flex justify-between items-center px-4 md:px-8 lg:px-16" id="topNav">
+        <!-- Logo -->
         <div class="flex items-center gap-2 md:gap-3">
             <a href="index.php" class="flex items-center gap-2 md:gap-3">
                 <img alt="Life Circle Logo" class="h-8 w-8 md:h-12 md:w-12 object-contain" src="assets/logo.png">
@@ -128,29 +129,37 @@
                 </div>
             </a>
         </div>
-        <div class="hidden md:flex items-center gap-8 font-manrope font-bold tracking-tight">
-            <a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="about.php">About Us</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="services.php">Services</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="gallery.php">Gallery</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="contact.php">Contact</a>
-            
-            <?php if (is_logged_in()): ?>
-                <?php if (is_admin()): ?>
-                    <a class="text-secondary bg-secondary/5 px-4 py-2 rounded-full hover:bg-secondary/10 transition-all text-sm" href="admin/index.php">Admin Portal</a>
-                <?php else: ?>
-                    <a class="text-secondary bg-secondary/5 px-4 py-2 rounded-full hover:bg-secondary/10 transition-all text-sm" href="dashboard.php">My Dashboard</a>
-                <?php endif; ?>
-                <form action="logout.php" method="POST" class="inline">
-                    <button type="submit" class="text-red-400 hover:text-red-600 transition-colors text-xs uppercase tracking-widest">Logout</button>
-                </form>
-            <?php else: ?>
-                <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-bold" href="login.php">Login</a>
-                <a class="text-secondary bg-secondary/5 px-4 py-2 rounded-full hover:bg-secondary/10 transition-all text-sm font-bold" href="register.php">Register</a>
-            <?php endif; ?>
+
+        <!-- Center Menu -->
+        <div class="hidden lg:flex items-center gap-8 xl:gap-10">
+            <a class="text-primary font-manrope font-bold hover:text-secondary transition-all flex items-center gap-1.5 text-sm" href="index.php">
+                <span class="material-symbols-outlined text-lg">home</span> Home
+            </a>
+            <a class="text-primary font-manrope font-bold hover:text-secondary transition-all text-sm" href="about.php">About Us</a>
+            <a class="text-primary font-manrope font-bold hover:text-secondary transition-all text-sm" href="services.php">Services</a>
+            <a class="text-primary font-manrope font-bold hover:text-secondary transition-all text-sm" href="gallery.php">Gallery</a>
+            <a class="text-primary font-manrope font-bold hover:text-secondary transition-all text-sm" href="contact.php">Contact</a>
         </div>
-        <a href="enroll.php" class="btn-interact bg-primary text-on-primary px-3 md:px-6 py-1.5 md:py-2.5 rounded-full font-manrope font-bold hover:brightness-110 shadow-premium text-[9px] md:text-base whitespace-nowrap font-bengali">
-            DMC কোর্সে ভর্তি হোন
-        </a>
+
+        <!-- Right Side: Auth & Action -->
+        <div class="flex items-center gap-4 md:gap-6">
+            <div class="hidden md:flex items-center gap-4">
+                <?php if (is_logged_in()): ?>
+                    <a class="text-secondary bg-secondary/5 px-4 py-2 rounded-full hover:bg-secondary/10 transition-all text-xs font-bold uppercase tracking-wider" href="dashboard.php">Dashboard</a>
+                    <form action="logout.php" method="POST" class="inline">
+                        <button type="submit" class="text-red-400 hover:text-red-600 transition-colors text-[10px] font-black uppercase tracking-widest">Logout</button>
+                    </form>
+                <?php else: ?>
+                    <a class="text-primary/60 hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest" href="login.php">Login</a>
+                    <a class="text-secondary bg-secondary/5 px-4 py-2 rounded-full hover:bg-secondary/10 transition-all text-xs font-bold uppercase tracking-widest" href="register.php">Register</a>
+                <?php endif; ?>
+            </div>
+            
+            <a href="enroll.php" class="btn-interact bg-primary text-white px-5 md:px-7 py-2 md:py-3 rounded-full font-manrope font-bold hover:brightness-110 shadow-premium text-[10px] md:text-xs whitespace-nowrap font-bengali flex items-center gap-2">
+                <span>DMC কোর্সে ভর্তি হোন</span>
+                <span class="material-symbols-outlined text-sm md:text-base">school</span>
+            </a>
+        </div>
     </nav>
 
     <main class="pt-16 md:pt-24">
