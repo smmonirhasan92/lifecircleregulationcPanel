@@ -67,10 +67,14 @@
                 <p class="text-on-surface-variant text-lg leading-relaxed mb-10">
                     Schedule your professional assessment or family counseling session today. We are here to support you every step of the way.
                 </p>
-                <a href="appointment.php" class="bg-primary text-white px-12 py-5 rounded-full font-bold text-xl hover:brightness-110 transition-all shadow-premium">
+                <a href="appointment.php" class="btn-interact bg-primary text-white px-12 py-5 rounded-full font-bold text-xl hover:brightness-110 transition-all shadow-premium">
                     Book Appointment Now
                 </a>
             </div>
+        <div class="pt-24 text-center">
+            <a href="index.php" class="btn-interact inline-flex items-center gap-3 bg-white text-primary border-2 border-primary/10 px-10 py-5 rounded-2xl font-bold text-lg shadow-whisper">
+                <span class="material-symbols-outlined">home</span> Back to Home
+            </a>
         </div>
     </div>
 </section>
