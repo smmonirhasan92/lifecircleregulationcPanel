@@ -8,7 +8,7 @@ $early_bird_deadline = get_setting('early_bird_deadline');
     <div class="container mx-auto px-8 lg:px-16">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <!-- Text Content -->
-            <div data-aos="fade-right" data-aos-duration="1000">
+            <div class="animate-fade-in-up">
                 <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/5 text-primary border border-primary/10 mb-8 backdrop-blur-sm">
                     <span class="relative flex h-3 w-3">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -35,22 +35,22 @@ $early_bird_deadline = get_setting('early_bird_deadline');
                 <!-- Quick Stats -->
                 <div class="mt-16 grid grid-cols-3 gap-8 pt-10 border-t border-primary/5">
                     <div>
-                        <div class="text-3xl font-extrabold text-primary mb-1">15+</div>
-                        <div class="text-sm text-on-surface-variant/60 font-medium">Years Experience</div>
+                        <div class="text-3xl lg:text-4xl font-extrabold text-primary mb-1"><span class="counter" data-target="15">0</span>+</div>
+                        <div class="text-xs lg:text-sm text-on-surface-variant/60 font-bold uppercase tracking-widest">Years Experience</div>
                     </div>
                     <div>
-                        <div class="text-3xl font-extrabold text-primary mb-1">500+</div>
-                        <div class="text-sm text-on-surface-variant/60 font-medium">Families Helped</div>
+                        <div class="text-3xl lg:text-4xl font-extrabold text-primary mb-1"><span class="counter" data-target="21234">0</span>+</div>
+                        <div class="text-xs lg:text-sm text-on-surface-variant/60 font-bold uppercase tracking-widest">Happy Families</div>
                     </div>
                     <div>
-                        <div class="text-3xl font-extrabold text-primary mb-1">Reg</div>
-                        <div class="text-sm text-on-surface-variant/60 font-medium">C-204398</div>
+                        <div class="text-3xl lg:text-4xl font-extrabold text-primary mb-1"><span class="counter" data-target="50">0</span>+</div>
+                        <div class="text-xs lg:text-sm text-on-surface-variant/60 font-bold uppercase tracking-widest">Certifications</div>
                     </div>
                 </div>
             </div>
 
             <!-- Image Section -->
-            <div class="relative flex justify-center lg:justify-end" data-aos="fade-left" data-aos-duration="1000">
+            <div class="relative flex justify-center lg:justify-end animate-fade-in-right">
                 <div class="absolute -top-10 -right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
                 <div class="relative w-full max-w-md bg-white p-5 rounded-[3rem] shadow-premium transform rotate-2 hover:rotate-0 transition-all duration-700">
                     <div class="rounded-[2.5rem] overflow-hidden aspect-[4/5] bg-surface-container relative group">
@@ -59,7 +59,7 @@ $early_bird_deadline = get_setting('early_bird_deadline');
                     </div>
                 </div>
                 <!-- Float Badge -->
-                <div class="absolute -bottom-10 -left-10 bg-white/80 backdrop-blur-xl p-8 rounded-[2.5rem] shadow-premium max-w-[300px] border border-white/50 animate-bounce-slow" data-aos="zoom-in" data-aos-delay="500">
+                <div class="absolute -bottom-10 -left-10 bg-white/80 backdrop-blur-xl p-8 rounded-[2.5rem] shadow-premium max-w-[300px] border border-white/50 animate-bounce-slow">
                     <div class="flex items-center gap-4 mb-4">
                         <div class="w-14 h-14 bg-blush/20 rounded-2xl flex items-center justify-center">
                             <span class="material-symbols-outlined text-blush text-3xl font-bold">psychology_alt</span>
@@ -114,10 +114,11 @@ $early_bird_deadline = get_setting('early_bird_deadline');
     </div>
 </section>
 
-<!-- About Section -->
-<section class="py-32 bg-surface" id="about">
+<!-- Section: Professional Journey (About) -->
+<section class="py-32 bg-surface relative overflow-hidden" id="about">
+    <div class="absolute -left-20 top-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
     <div class="container mx-auto px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-        <div class="relative group flex justify-center">
+        <div class="relative group flex justify-center" data-aos="fade-right">
             <div class="rounded-[4rem] overflow-hidden aspect-square max-w-md shadow-premium relative z-10 border-[16px] border-white transform -rotate-3 group-hover:rotate-0 transition-all duration-1000">
                 <img alt="Sharmin Mujahid professional" class="w-full h-full object-cover" src="assets/fastimnge.png">
             </div>
