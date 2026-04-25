@@ -25,7 +25,7 @@ $early_bird_deadline = get_setting('early_bird_deadline');
             <div class="absolute -top-10 -right-10 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
             <div class="relative w-full max-w-md bg-white p-5 rounded-[3rem] shadow-premium transform rotate-2 hover:rotate-0 transition-transform duration-1000">
                 <div class="rounded-[2.5rem] overflow-hidden aspect-[4/5] bg-surface-container">
-                    <img alt="Sharmin Mujahid professional" class="w-full h-full object-cover" src="assets/Sharmin Mujahid2.png">
+                    <img alt="Sharmin Mujahid professional" class="w-full h-full object-cover" src="assets/fastimnge.png">
                 </div>
             </div>
             <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-[2rem] shadow-premium max-w-[280px] border border-primary/5">
@@ -86,7 +86,7 @@ $early_bird_deadline = get_setting('early_bird_deadline');
     <div class="container mx-auto px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
         <div class="relative group flex justify-center">
             <div class="rounded-[4rem] overflow-hidden aspect-square max-w-md shadow-premium relative z-10 border-[16px] border-white transform -rotate-3 group-hover:rotate-0 transition-all duration-1000">
-                <img alt="Sharmin Mujahid professional" class="w-full h-full object-cover" src="assets/Sharmin Mujahid2.png">
+                <img alt="Sharmin Mujahid professional" class="w-full h-full object-cover" src="assets/fastimnge.png">
             </div>
             <div class="absolute -top-12 -left-12 w-80 h-80 bg-primary-container rounded-full -z-0 opacity-50"></div>
             <div class="absolute bottom-10 -right-10 px-10 py-8 bg-white rounded-[2rem] shadow-premium z-20 border border-primary/5">
