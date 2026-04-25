@@ -1,7 +1,7 @@
 <?php require_once 'includes/header.php'; ?>
 
-<section class="pt-32 pb-20 bg-primary-container/20">
-    <div class="container mx-auto px-8 lg:px-16 text-center">
+<section class="pt-32 pb-20 bg-primary-container/30">
+    <div class="container mx-auto px-8 lg:px-16 text-center animate-fade-in-up">
         <span class="text-secondary font-bold tracking-widest uppercase text-sm">Comprehensive Care</span>
         <h1 class="text-4xl md:text-6xl font-extrabold text-primary mt-4 mb-6">Our Services</h1>
         <p class="text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">

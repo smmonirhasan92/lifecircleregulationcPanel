@@ -2,7 +2,7 @@
 
 <section class="relative min-h-[60vh] flex items-center overflow-hidden bg-primary-container/30">
     <div class="container mx-auto px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-24 relative z-10">
-        <div class="animate-[fadeInUp_1s_ease-out_forwards]">
+        <div class="animate-fade-in-up">
             <span class="text-secondary font-bold tracking-widest uppercase text-sm">About Us</span>
             <h1 class="text-4xl md:text-7xl font-extrabold text-primary leading-tight mb-8 mt-4">
                 Compassionate Sanctuary for <span class="text-secondary">Every Child</span>
@@ -11,9 +11,9 @@
                 Dedicated to providing holistic emotional and behavioral support for children with developmental challenges and their families.
             </p>
         </div>
-        <div class="relative flex justify-center">
+        <div class="relative flex justify-center animate-fade-in-right">
              <div class="rounded-[3rem] overflow-hidden aspect-square max-w-md whisper-shadow relative z-10 border-[12px] border-white transform rotate-2 hover:rotate-0 transition-all duration-700">
-                <img alt="Sharmin Mujahid professional" class="w-full h-full object-cover" src="assets/Sharmin Mujahid2.png">
+                <img alt="Sharmin Mujahid professional" class="w-full h-full object-cover" src="assets/fastimnge.png">
             </div>
         </div>
     </div>
