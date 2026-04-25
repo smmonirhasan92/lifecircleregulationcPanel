@@ -255,13 +255,13 @@ $early_bird_deadline = get_setting('early_bird_deadline');
                                     <?php for($i=0; $i<5; $i++): ?><span class="material-symbols-outlined text-blush text-sm fill-1">star</span><?php endfor; ?>
                                 </div>
                                 <p class="text-lg text-primary font-medium italic mb-8 leading-relaxed font-manrope">
-                                    "শারমিন ম্যাডামের গাইডেন্সে আমার সন্তানের আচরণের অনেক ইতিবাচক পরিবর্তন এসেছে। তিনি খুব ধৈর্য নিয়ে সবকিছু বোঝান।"
+                                    "Life Circle-এর স্পেশাল এডুকেশনাল সাপোর্ট আমাদের জন্য আশীর্বাদস্বরূপ। আমার ছেলের আত্মবিশ্বাস এখন অনেক বেড়েছে।"
                                 </p>
                                 <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center text-primary font-bold text-lg uppercase">ন</div>
+                                    <div class="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center text-primary font-bold text-lg uppercase font-bengali">ক</div>
                                     <div>
-                                        <div class="font-bold text-primary">নাসরিন আক্তার</div>
-                                        <div class="text-[10px] text-on-surface-variant/60 font-black uppercase tracking-widest">Proud Parent</div>
+                                        <div class="font-bold text-primary font-bengali">কাকলি আহমেদ</div>
+                                        <div class="text-[10px] text-on-surface-variant/60 font-black uppercase tracking-widest">Guardian</div>
                                     </div>
                                 </div>
                             </div>
@@ -273,13 +273,13 @@ $early_bird_deadline = get_setting('early_bird_deadline');
                                     <?php for($i=0; $i<5; $i++): ?><span class="material-symbols-outlined text-blush text-sm fill-1">star</span><?php endfor; ?>
                                 </div>
                                 <p class="text-lg text-primary font-medium italic mb-8 leading-relaxed font-manrope">
-                                    "Life Circle-এর স্পেশাল এডুকেশন সাপোর্ট আমাদের জন্য আশীর্বাদস্বরূপ। আমার ছেলের আত্মবিশ্বাস এখন অনেক বেড়েছে।"
+                                    "শারমিন ম্যাডামের গাইডেন্সে আমার সন্তানের আচরণের অনেক ইতিবাচক পরিবর্তন এসেছে। তিনি খুব ধৈর্য নিয়ে সবকিছু বোঝান।"
                                 </p>
                                 <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-secondary-container rounded-xl flex items-center justify-center text-primary font-bold text-lg uppercase">ক</div>
+                                    <div class="w-12 h-12 bg-secondary-container rounded-xl flex items-center justify-center text-primary font-bold text-lg uppercase font-bengali">ত</div>
                                     <div>
-                                        <div class="font-bold text-primary">কামরুল হাসান</div>
-                                        <div class="text-[10px] text-on-surface-variant/60 font-black uppercase tracking-widest">Guardian</div>
+                                        <div class="font-bold text-primary font-bengali">তানজিমা আলম</div>
+                                        <div class="text-[10px] text-on-surface-variant/60 font-black uppercase tracking-widest">Proud Parent</div>
                                     </div>
                                 </div>
                             </div>
