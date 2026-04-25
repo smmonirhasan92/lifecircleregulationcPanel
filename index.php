@@ -32,19 +32,19 @@ $early_bird_deadline = get_setting('early_bird_deadline');
                     </button>
                 </div>
                 
-                <!-- Quick Stats -->
-                <div class="mt-16 grid grid-cols-3 gap-8 pt-10 border-t border-primary/5">
+                <!-- Refined Stats -->
+                <div class="mt-16 grid grid-cols-3 gap-12 pt-10 border-t border-primary/5 max-w-lg">
                     <div>
-                        <div class="text-3xl lg:text-4xl font-extrabold text-primary mb-1"><span class="counter" data-target="15">0</span>+</div>
-                        <div class="text-xs lg:text-sm text-on-surface-variant/60 font-bold uppercase tracking-widest">Years Experience</div>
+                        <div class="text-3xl font-extrabold text-primary mb-1"><span class="counter" data-target="15">0</span>+</div>
+                        <div class="text-[10px] text-on-surface-variant/40 font-black uppercase tracking-[0.2em]">Years</div>
                     </div>
                     <div>
-                        <div class="text-3xl lg:text-4xl font-extrabold text-primary mb-1"><span class="counter" data-target="21234">0</span>+</div>
-                        <div class="text-xs lg:text-sm text-on-surface-variant/60 font-bold uppercase tracking-widest">Happy Families</div>
+                        <div class="text-3xl font-extrabold text-primary mb-1"><span class="counter" data-target="5200">0</span>+</div>
+                        <div class="text-[10px] text-on-surface-variant/40 font-black uppercase tracking-[0.2em]">Families</div>
                     </div>
                     <div>
-                        <div class="text-3xl lg:text-4xl font-extrabold text-primary mb-1"><span class="counter" data-target="50">0</span>+</div>
-                        <div class="text-xs lg:text-sm text-on-surface-variant/60 font-bold uppercase tracking-widest">Certifications</div>
+                        <div class="text-3xl font-extrabold text-primary mb-1"><span class="counter" data-target="100">0</span>+</div>
+                        <div class="text-[10px] text-on-surface-variant/40 font-black uppercase tracking-[0.2em]">Programs</div>
                     </div>
                 </div>
             </div>
@@ -120,7 +120,7 @@ $early_bird_deadline = get_setting('early_bird_deadline');
     <div class="container mx-auto px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
         <div class="relative group flex justify-center" data-aos="fade-right">
             <div class="rounded-[4rem] overflow-hidden aspect-square max-w-md shadow-premium relative z-10 border-[16px] border-white transform -rotate-3 group-hover:rotate-0 transition-all duration-1000">
-                <img alt="Sharmin Mujahid professional" class="w-full h-full object-cover" src="assets/fastimnge.png">
+                <img alt="Sharmin Mujahid professional" class="w-full h-full object-cover" src="assets/Sharmin%20Mujahid2.png">
             </div>
             <div class="absolute -top-12 -left-12 w-80 h-80 bg-primary-container rounded-full -z-0 opacity-50"></div>
             <div class="absolute bottom-10 -right-10 px-10 py-8 bg-white rounded-[2rem] shadow-premium z-20 border border-primary/5">
@@ -223,78 +223,65 @@ $early_bird_deadline = get_setting('early_bird_deadline');
     </div>
 </section>
 
-<!-- Reviews Section -->
-<section id="reviews" class="py-32 overflow-hidden">
+<!-- Section: Success Stories (Testimonials) -->
+<section id="reviews" class="py-32 bg-surface overflow-hidden">
     <div class="container mx-auto px-8 lg:px-16">
-        <div class="text-center mb-20" data-aos="fade-up">
-            <h2 class="text-4xl lg:text-6xl font-extrabold text-primary mb-6 font-manrope">Success Stories</h2>
-            <p class="text-on-surface-variant/70 max-w-2xl mx-auto text-lg">Heartfelt testimonials from families we've had the privilege to support.</p>
-        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <!-- Left: Context -->
+            <div data-aos="fade-right">
+                <span class="text-secondary font-black tracking-[0.3em] uppercase text-xs mb-6 block">Testimonials</span>
+                <h2 class="text-4xl lg:text-6xl font-extrabold text-primary mb-8 font-manrope">Voices of <span class="text-blush">Hope</span></h2>
+                <p class="text-on-surface-variant/70 text-xl leading-relaxed mb-10">
+                    Real stories from families who found clarity and support in our sanctuary. Every word reflects a journey of transformation.
+                </p>
+                <div class="flex gap-4">
+                    <button class="swiper-prev-reviews w-14 h-14 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-white transition-all flex items-center justify-center border border-primary/10">
+                        <span class="material-symbols-outlined">west</span>
+                    </button>
+                    <button class="swiper-next-reviews w-14 h-14 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-white transition-all flex items-center justify-center border border-primary/10">
+                        <span class="material-symbols-outlined">east</span>
+                    </button>
+                </div>
+            </div>
 
-        <div class="swiper reviewsSwiper !overflow-visible">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide w-[350px] md:w-[450px]">
-                    <div class="bg-white p-12 rounded-[4rem] shadow-whisper border border-primary/5 relative">
-                        <span class="material-symbols-outlined text-blush text-7xl absolute -top-8 -left-4 opacity-20">format_quote</span>
-                        <div class="flex gap-1 mb-8">
-                            <span class="material-symbols-outlined text-blush fill-1">star</span>
-                            <span class="material-symbols-outlined text-blush fill-1">star</span>
-                            <span class="material-symbols-outlined text-blush fill-1">star</span>
-                            <span class="material-symbols-outlined text-blush fill-1">star</span>
-                            <span class="material-symbols-outlined text-blush fill-1">star</span>
-                        </div>
-                        <p class="text-xl text-primary font-medium italic mb-10 leading-relaxed font-manrope">
-                            "শারমিন ম্যাডামের গাইডেন্সে আমার সন্তানের আচরণের অনেক ইতিবাচক পরিবর্তন এসেছে। তিনি খুব ধৈর্য নিয়ে সবকিছু বোঝান।"
-                        </p>
-                        <div class="flex items-center gap-5">
-                            <div class="w-16 h-16 bg-primary-container rounded-2xl flex items-center justify-center text-primary font-bold text-2xl uppercase">ন</div>
-                            <div>
-                                <div class="font-extrabold text-primary text-xl">নাসরিন আক্তার</div>
-                                <div class="text-sm text-on-surface-variant/60 font-bold uppercase tracking-wider">গর্বিত মা</div>
+            <!-- Right: Carousel (Half width) -->
+            <div class="relative" data-aos="fade-left">
+                <div class="swiper reviewsSwiper !overflow-visible">
+                    <div class="swiper-wrapper">
+                        <!-- Review 1 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white p-10 rounded-[3rem] shadow-whisper border border-primary/5">
+                                <div class="flex gap-1 mb-6">
+                                    <?php for($i=0; $i<5; $i++): ?><span class="material-symbols-outlined text-blush text-sm fill-1">star</span><?php endfor; ?>
+                                </div>
+                                <p class="text-lg text-primary font-medium italic mb-8 leading-relaxed font-manrope">
+                                    "শারমিন ম্যাডামের গাইডেন্সে আমার সন্তানের আচরণের অনেক ইতিবাচক পরিবর্তন এসেছে। তিনি খুব ধৈর্য নিয়ে সবকিছু বোঝান।"
+                                </p>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center text-primary font-bold text-lg uppercase">ন</div>
+                                    <div>
+                                        <div class="font-bold text-primary">নাসরিন আক্তার</div>
+                                        <div class="text-[10px] text-on-surface-variant/60 font-black uppercase tracking-widest">Proud Parent</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="swiper-slide w-[350px] md:w-[450px]">
-                    <div class="bg-white p-12 rounded-[4rem] shadow-whisper border border-primary/5 relative">
-                        <span class="material-symbols-outlined text-blush text-7xl absolute -top-8 -left-4 opacity-20">format_quote</span>
-                        <div class="flex gap-1 mb-8">
-                            <span class="material-symbols-outlined text-blush fill-1">star</span>
-                            <span class="material-symbols-outlined text-blush fill-1">star</span>
-                            <span class="material-symbols-outlined text-blush fill-1">star</span>
-                            <span class="material-symbols-outlined text-blush fill-1">star</span>
-                            <span class="material-symbols-outlined text-blush fill-1">star</span>
-                        </div>
-                        <p class="text-xl text-primary font-medium italic mb-10 leading-relaxed font-manrope">
-                            "Life Circle-এর স্পেশাল এডুকেশন সাপোর্ট আমাদের জন্য আশীর্বাদস্বরূপ। আমার ছেলের আত্মবিশ্বাস এখন আকাশচুম্বী।"
-                        </p>
-                        <div class="flex items-center gap-5">
-                            <div class="w-16 h-16 bg-secondary-container rounded-2xl flex items-center justify-center text-primary font-bold text-2xl uppercase">ক</div>
-                            <div>
-                                <div class="font-extrabold text-primary text-xl">কামরুল হাসান</div>
-                                <div class="text-sm text-on-surface-variant/60 font-bold uppercase tracking-wider">অভিভাবক</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide w-[350px] md:w-[450px]">
-                    <div class="bg-white p-12 rounded-[4rem] shadow-whisper border border-primary/5 relative">
-                        <span class="material-symbols-outlined text-blush text-7xl absolute -top-8 -left-4 opacity-20">format_quote</span>
-                        <div class="flex gap-1 mb-8">
-                            <span class="material-symbols-outlined text-blush fill-1">star</span>
-                            <span class="material-symbols-outlined text-blush fill-1">star</span>
-                            <span class="material-symbols-outlined text-blush fill-1">star</span>
-                            <span class="material-symbols-outlined text-blush fill-1">star</span>
-                            <span class="material-symbols-outlined text-blush fill-1">star</span>
-                        </div>
-                        <p class="text-xl text-primary font-medium italic mb-10 leading-relaxed font-manrope">
-                            "ম্যাডামের থেরাপি সেশনগুলো খুব কার্যকর। আমার সন্তানের স্পিচ ডেভেলপমেন্টে আমরা দারুণ ফলাফল পেয়েছি।"
-                        </p>
-                        <div class="flex items-center gap-5">
-                            <div class="w-16 h-16 bg-blush/20 rounded-2xl flex items-center justify-center text-primary font-bold text-2xl uppercase">স</div>
-                            <div>
-                                <div class="font-extrabold text-primary text-xl">সাদিয়া রহমান</div>
-                                <div class="text-sm text-on-surface-variant/60 font-bold uppercase tracking-wider">অভিভাবক</div>
+                        <!-- Review 2 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white p-10 rounded-[3rem] shadow-whisper border border-primary/5">
+                                <div class="flex gap-1 mb-6">
+                                    <?php for($i=0; $i<5; $i++): ?><span class="material-symbols-outlined text-blush text-sm fill-1">star</span><?php endfor; ?>
+                                </div>
+                                <p class="text-lg text-primary font-medium italic mb-8 leading-relaxed font-manrope">
+                                    "Life Circle-এর স্পেশাল এডুকেশন সাপোর্ট আমাদের জন্য আশীর্বাদস্বরূপ। আমার ছেলের আত্মবিশ্বাস এখন অনেক বেড়েছে।"
+                                </p>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-secondary-container rounded-xl flex items-center justify-center text-primary font-bold text-lg uppercase">ক</div>
+                                    <div>
+                                        <div class="font-bold text-primary">কামরুল হাসান</div>
+                                        <div class="text-[10px] text-on-surface-variant/60 font-black uppercase tracking-widest">Guardian</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -364,78 +351,93 @@ $early_bird_deadline = get_setting('early_bird_deadline');
     </div>
 </div>
 
-<!-- Social Section -->
-<section class="py-32 bg-surface" id="videos">
+<!-- Section: Social Action (Facebook Videos) -->
+<section class="py-32 bg-surface overflow-hidden" id="videos">
     <div class="container mx-auto px-8 lg:px-16">
-        <div class="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
-            <div class="max-w-2xl">
-                <span class="text-secondary font-bold tracking-[0.2em] uppercase text-sm">Life Circle on Social</span>
-                <h2 class="text-4xl md:text-6xl font-extrabold text-primary mt-4 mb-4">Life Circle in Action</h2>
-                <p class="text-on-surface-variant text-lg">Follow our journey on social media for daily tips, success stories, and developmental guidance.</p>
+        <div class="flex flex-col md:flex-row justify-between items-center mb-20 gap-8">
+            <div data-aos="fade-right">
+                <span class="text-secondary font-black tracking-[0.3em] uppercase text-xs mb-4 block">Social Action</span>
+                <h2 class="text-4xl lg:text-6xl font-extrabold text-primary font-manrope">Life Circle in <span class="text-blush">Action</span></h2>
+                <p class="text-on-surface-variant/70 mt-4 text-lg">Follow our journey on social media for daily tips and success stories.</p>
             </div>
-            <a href="https://www.facebook.com/share/1DwyNugqj7/" target="_blank" class="bg-[#1877F2] text-white px-10 py-5 rounded-full font-bold flex items-center gap-3 hover:brightness-110 transition-all shadow-premium">
+            <a href="https://www.facebook.com/share/1DwyNugqj7/" target="_blank" class="btn-interact bg-[#1877F2] text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3 shadow-premium whitespace-nowrap">
                 <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                Follow on Facebook
+                Follow Our Story
             </a>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-            <!-- Reels (Vertical) -->
-            <a href="https://www.facebook.com/share/r/1J96bcGXcG/" target="_blank" class="lg:col-span-1 group relative aspect-[9/16] bg-black rounded-[2.5rem] overflow-hidden shadow-premium block">
-                <img src="assets/gallery/dmc-success.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000" alt="Reel 1">
-                <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
-                    <span class="text-white/70 text-[10px] font-bold uppercase tracking-widest mb-2">Facebook Reel</span>
-                    <h3 class="text-lg text-white font-bold leading-tight group-hover:text-secondary-container transition-colors">Success Story: DMC Completion</h3>
-                    <div class="mt-6 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center group-hover:bg-primary transition-all border border-white/20">
-                        <span class="material-symbols-outlined text-white">play_arrow</span>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="https://www.facebook.com/share/r/17XXuRemMB/" target="_blank" class="lg:col-span-1 group relative aspect-[9/16] bg-black rounded-3xl overflow-hidden shadow-xl block">
-                <img src="assets/gallery/community-impact.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Reel 2">
-                <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
-                    <span class="text-white/70 text-[10px] font-bold uppercase tracking-widest mb-2">Facebook Reel</span>
-                    <h3 class="text-lg text-white font-bold leading-tight group-hover:text-secondary-container transition-colors">Community Awareness</h3>
-                    <div class="mt-6 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center group-hover:bg-primary transition-all border border-white/20">
-                        <span class="material-symbols-outlined text-white">play_arrow</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://www.facebook.com/share/r/1Gr4s4bnG5/" target="_blank" class="lg:col-span-1 group relative aspect-[9/16] bg-black rounded-[2.5rem] overflow-hidden shadow-premium block">
-                <img src="assets/gallery/teacher-training.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000" alt="Reel 3">
-                <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
-                    <span class="text-white/70 text-[10px] font-bold uppercase tracking-widest mb-2">Facebook Reel</span>
-                    <h3 class="text-lg text-white font-bold leading-tight group-hover:text-secondary-container transition-colors">Inclusive Workshop</h3>
-                    <div class="mt-6 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center group-hover:bg-primary transition-all border border-white/20">
-                        <span class="material-symbols-outlined text-white">play_arrow</span>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Full Videos (Horizontal/Large) -->
-            <div class="lg:col-span-2 space-y-8">
-                <a href="https://www.facebook.com/share/v/1b9mY2ui48/" target="_blank" class="group relative aspect-video bg-black rounded-[2.5rem] overflow-hidden shadow-premium block">
-                    <img src="assets/gallery/counseling-session.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000" alt="Video 1">
-                    <div class="absolute inset-0 flex flex-col justify-end p-10 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
-                        <span class="text-white/70 text-xs font-bold uppercase tracking-widest mb-2">Featured Video</span>
-                        <h3 class="text-2xl text-white font-black leading-tight mb-6 group-hover:text-secondary-container transition-colors uppercase">Understanding Support</h3>
-                        <div class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-all">
-                            <span class="material-symbols-outlined text-3xl">play_circle</span>
+        <div class="swiper socialSwiper !overflow-visible">
+            <div class="swiper-wrapper">
+                <!-- Reel 1 -->
+                <div class="swiper-slide w-[280px] h-auto">
+                    <a href="https://www.facebook.com/share/r/1J96bcGXcG/" target="_blank" class="group relative aspect-[9/16] bg-black rounded-[2.5rem] overflow-hidden shadow-premium block h-full">
+                        <img src="assets/gallery/dmc-success.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000" alt="Reel">
+                        <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                            <h3 class="text-white font-bold group-hover:text-secondary-container transition-colors">Success Story: DMC Completion</h3>
                         </div>
-                    </div>
-                </a>
-                <a href="https://www.facebook.com/share/v/1Aqw7GZSdX/" target="_blank" class="group relative aspect-video bg-black rounded-[2.5rem] overflow-hidden shadow-premium block">
-                    <img src="assets/gallery/parent-support.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000" alt="Video 2">
-                    <div class="absolute inset-0 flex flex-col justify-end p-10 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
-                        <span class="text-white/70 text-xs font-bold uppercase tracking-widest mb-2">Featured Video</span>
-                        <h3 class="text-2xl text-white font-black leading-tight mb-6 group-hover:text-secondary-container transition-colors uppercase">Parenting Guidance</h3>
-                        <div class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-all">
-                            <span class="material-symbols-outlined text-3xl">play_circle</span>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center group-hover:bg-primary transition-all border border-white/20 shadow-xl">
+                                <span class="material-symbols-outlined text-white text-3xl">play_arrow</span>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
+                <!-- Reel 2 -->
+                <div class="swiper-slide w-[280px] h-auto">
+                    <a href="https://www.facebook.com/share/r/17XXuRemMB/" target="_blank" class="group relative aspect-[9/16] bg-black rounded-[2.5rem] overflow-hidden shadow-premium block h-full">
+                        <img src="assets/gallery/community-impact.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000" alt="Reel">
+                        <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                            <h3 class="text-white font-bold group-hover:text-secondary-container transition-colors">Community Awareness Drive</h3>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center group-hover:bg-primary transition-all border border-white/20 shadow-xl">
+                                <span class="material-symbols-outlined text-white text-3xl">play_arrow</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Video 1 -->
+                <div class="swiper-slide w-[400px] h-auto">
+                    <a href="https://www.facebook.com/share/v/1b9mY2ui48/" target="_blank" class="group relative aspect-video bg-black rounded-[2.5rem] overflow-hidden shadow-premium block h-full">
+                        <img src="assets/gallery/counseling-session.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000" alt="Video">
+                        <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                            <h3 class="text-2xl text-white font-black uppercase group-hover:text-secondary-container transition-colors">Understanding Support</h3>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-20 h-20 rounded-full bg-primary/80 backdrop-blur-md flex items-center justify-center group-hover:bg-primary transition-all shadow-2xl">
+                                <span class="material-symbols-outlined text-white text-5xl">play_circle</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Reel 3 -->
+                <div class="swiper-slide w-[280px] h-auto">
+                    <a href="https://www.facebook.com/share/r/1Gr4s4bnG5/" target="_blank" class="group relative aspect-[9/16] bg-black rounded-[2.5rem] overflow-hidden shadow-premium block h-full">
+                        <img src="assets/gallery/teacher-training.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000" alt="Reel">
+                        <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                            <h3 class="text-white font-bold group-hover:text-secondary-container transition-colors">Inclusive Teaching Workshop</h3>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center group-hover:bg-primary transition-all border border-white/20 shadow-xl">
+                                <span class="material-symbols-outlined text-white text-3xl">play_arrow</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Video 2 -->
+                <div class="swiper-slide w-[400px] h-auto">
+                    <a href="https://www.facebook.com/share/v/1Aqw7GZSdX/" target="_blank" class="group relative aspect-video bg-black rounded-[2.5rem] overflow-hidden shadow-premium block h-full">
+                        <img src="assets/gallery/parent-support.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000" alt="Video">
+                        <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                            <h3 class="text-2xl text-white font-black uppercase group-hover:text-secondary-container transition-colors">Parenting Guidance</h3>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-20 h-20 rounded-full bg-primary/80 backdrop-blur-md flex items-center justify-center group-hover:bg-primary transition-all shadow-2xl">
+                                <span class="material-symbols-outlined text-white text-5xl">play_circle</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

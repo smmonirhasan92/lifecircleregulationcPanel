@@ -13,7 +13,7 @@
         </div>
         <div class="relative flex justify-center animate-fade-in-right">
              <div class="rounded-[3rem] overflow-hidden aspect-square max-w-md whisper-shadow relative z-10 border-[12px] border-white transform rotate-2 hover:rotate-0 transition-all duration-700">
-                <img alt="Sharmin Mujahid professional" class="w-full h-full object-cover" src="assets/fastimnge.png">
+                <img alt="Sharmin Mujahid professional" class="w-full h-full object-cover" src="assets/Sharmin%20Mujahid2.png">
             </div>
         </div>
     </div>
