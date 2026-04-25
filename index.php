@@ -54,7 +54,7 @@ $early_bird_deadline = get_setting('early_bird_deadline');
                 <div class="absolute -top-10 -right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
                 <div class="relative w-full max-w-md bg-white p-5 rounded-[3rem] shadow-premium transform rotate-2 hover:rotate-0 transition-all duration-700">
                     <div class="rounded-[2.5rem] overflow-hidden aspect-[4/5] bg-surface-container relative group">
-                        <img alt="Sharmin Mujahid professional" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="assets/fastimnge.png">
+                        <img alt="Sharmin Mujahid professional" class="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-105" src="assets/sarmin--1.png">
                         <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
                 </div>
@@ -114,30 +114,115 @@ $early_bird_deadline = get_setting('early_bird_deadline');
     </div>
 </section>
 
+<!-- Section: How It Works -->
+<section id="process" class="py-32 bg-white relative overflow-hidden">
+    <div class="container mx-auto px-8 lg:px-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            <!-- Left: Visual Guide -->
+            <div class="lg:col-span-5" data-aos="fade-right">
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-secondary/5 rounded-[3rem] blur-2xl group-hover:bg-secondary/10 transition-all"></div>
+                    <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white transform -rotate-2 hover:rotate-0 transition-all duration-700">
+                        <img src="assets/howtouse.jpeg" class="w-full h-auto max-h-[550px] object-contain bg-surface" alt="Parent Training Guide">
+                    </div>
+                    <!-- Decorative Badge -->
+                    <div class="absolute -bottom-6 -right-6 bg-secondary text-white p-6 rounded-3xl shadow-xl animate-bounce-slow hidden md:block">
+                        <span class="material-symbols-outlined text-3xl">lightbulb</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Steps -->
+            <div class="lg:col-span-7 space-y-12" data-aos="fade-left">
+                <div>
+                    <span class="text-secondary font-black tracking-[0.3em] uppercase text-xs mb-4 block">Our Methodology</span>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-primary mb-6 font-manrope leading-tight">How We <span class="text-blush">Empower</span> Your Family</h2>
+                    <p class="text-on-surface-variant/70 text-lg leading-relaxed max-w-xl">
+                        Our approach combines professional expertise with deep empathy to create a clear roadmap for your child's growth.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-8 rounded-[2rem] bg-primary-container/20 border border-primary/5 hover:bg-white hover:shadow-premium transition-all duration-500 group">
+                        <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined">contact_support</span>
+                        </div>
+                        <h4 class="font-black text-primary mb-3 uppercase tracking-tight text-sm">1. Initial Connection</h4>
+                        <p class="text-xs text-on-surface-variant/80 leading-relaxed">Book an assessment or counseling session through our simple online form or WhatsApp.</p>
+                    </div>
+
+                    <div class="p-8 rounded-[2rem] bg-secondary-container/20 border border-secondary/5 hover:bg-white hover:shadow-premium transition-all duration-500 group">
+                        <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined">analytics</span>
+                        </div>
+                        <h4 class="font-black text-primary mb-3 uppercase tracking-tight text-sm">2. Professional Evaluation</h4>
+                        <p class="text-xs text-on-surface-variant/80 leading-relaxed">A deep dive into your child's needs or your emotional journey with Sharmin Mujahid.</p>
+                    </div>
+
+                    <div class="p-8 rounded-[2rem] bg-primary-container/20 border border-primary/5 hover:bg-white hover:shadow-premium transition-all duration-500 group md:col-span-2">
+                        <div class="flex items-center gap-6">
+                            <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
+                                <span class="material-symbols-outlined">trending_up</span>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-primary mb-1 uppercase tracking-tight text-sm">3. Ongoing Growth & Support</h4>
+                                <p class="text-xs text-on-surface-variant/80 leading-relaxed">Receive personalized support plans, home training, and continuous guidance for lasting impact.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-6 pt-4">
+                    <button onclick="openModal('appointment')" class="btn-interact px-8 py-4 bg-primary text-white rounded-2xl font-bold shadow-premium">
+                        Book Your First Session
+                    </button>
+                    <a href="services.php" class="text-primary font-bold hover:text-secondary transition-colors flex items-center gap-2">
+                        Explore Services <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Section: Professional Journey (About) -->
 <section class="py-32 bg-surface relative overflow-hidden" id="about">
-    <div class="absolute -left-20 top-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+    <div class="absolute -right-20 top-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
     <div class="container mx-auto px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-        <div class="relative group flex justify-center" data-aos="fade-right">
-            <div class="rounded-[4rem] overflow-hidden aspect-square max-w-md shadow-premium relative z-10 border-[16px] border-white transform -rotate-3 group-hover:rotate-0 transition-all duration-1000">
+        <!-- Left: Text Content -->
+        <div data-aos="fade-right">
+            <span class="text-secondary font-black tracking-[0.3em] uppercase text-xs mb-6 block">Professional Expertise</span>
+            <h2 class="text-4xl lg:text-6xl font-extrabold text-primary mb-10 font-manrope leading-tight">
+                Compassion Meets <span class="text-blush">Experience</span>
+            </h2>
+            <div class="space-y-8 text-on-surface-variant/80 text-lg leading-relaxed">
+                <p>
+                    I am a Developmental Support Counselor dedicated to supporting children with developmental challenges and their families. I have practical experience working with children with developmental delays, autism, speech and behavioral difficulties.
+                </p>
+                <p>
+                    I focus on providing structured developmental support, parent guidance, and practical strategies that can be applied in daily life. My goal is to help each child reach their fullest potential in a supportive and understanding environment.
+                </p>
+                <div class="pt-4">
+                    <a href="about.php" class="text-primary font-bold hover:text-secondary transition-all flex items-center gap-3 group">
+                        Read More About My Story
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="relative group flex justify-center lg:justify-end" data-aos="fade-left">
+            <div class="rounded-[4rem] overflow-hidden aspect-square max-w-md shadow-premium relative z-10 border-[16px] border-white transform rotate-3 group-hover:rotate-0 transition-all duration-1000">
                 <img alt="Sharmin Mujahid professional" class="w-full h-full object-cover" src="assets/Sharmin%20Mujahid2.png">
             </div>
-            <div class="absolute -top-12 -left-12 w-80 h-80 bg-primary-container rounded-full -z-0 opacity-50"></div>
-            <div class="absolute bottom-10 -right-10 px-10 py-8 bg-white rounded-[2rem] shadow-premium z-20 border border-primary/5">
+            <div class="absolute -top-12 -right-12 w-80 h-80 bg-primary-container rounded-full -z-0 opacity-50"></div>
+            <div class="absolute bottom-10 -left-10 px-10 py-8 bg-white rounded-[2rem] shadow-premium z-20 border border-primary/5">
                 <div class="flex items-center gap-4">
                     <div class="text-5xl font-black text-secondary">15+</div>
                     <div class="text-xs font-black text-secondary uppercase tracking-widest leading-tight">Years<br>Experience</div>
                 </div>
             </div>
-        </div>
-        <div class="space-y-8">
-            <span class="text-secondary font-bold tracking-[0.2em] uppercase text-sm">Professional Expertise</span>
-            <h2 class="text-4xl md:text-6xl font-extrabold text-primary leading-tight">Compassion Meets Experience</h2>
-            <div class="space-y-6 text-on-surface-variant leading-relaxed text-lg">
-                <p>I am a Developmental Support Counselor dedicated to supporting children with developmental challenges and their families. I have practical experience working with children with developmental delays, autism, speech and behavioral difficulties.</p>
-                <p>I focus on providing structured developmental support, parent guidance, and practical strategies that can be applied in daily life. My goal is to help each child reach their fullest potential in a supportive and understanding environment.</p>
-            </div>
-            <a href="about.php" class="text-secondary font-black border-b-2 border-secondary pb-1 hover:text-primary hover:border-primary transition-all">Read More About My Story</a>
         </div>
     </div>
 </section>
