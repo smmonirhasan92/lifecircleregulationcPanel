@@ -16,8 +16,8 @@ if ($is_local) {
 } else {
     // Production Settings (cPanel)
     define('DB_HOST', 'localhost');
-    define('DB_NAME', 'smmonirh_lifecircleregulation'); 
-    define('DB_USER', 'smmonirh_lifecircleregulation');
+    define('DB_NAME', 'lifecircleregula_PHP'); // Updated with correct cPanel prefix
+    define('DB_USER', 'lifecircleregula_adminlcr');
     define('DB_PASS', 'Sir@@@@123@@'); // Restored from previous configuration
     define('SITE_URL', 'https://lifecircleregulation.com');
 }
