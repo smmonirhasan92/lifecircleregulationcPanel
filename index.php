@@ -5,46 +5,80 @@ $early_bird_deadline = get_setting('early_bird_deadline');
 
 <!-- Hero Section -->
 <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-primary-container/30">
-    <div class="container mx-auto px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-20 relative z-10">
-        <div class="xl:pr-10">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 text-secondary font-bold text-xs md:text-sm mb-6 shadow-sm border border-secondary/10 uppercase tracking-widest">
-                Developmental Support Counselor
-            </div>
-            <h1 class="text-5xl md:text-8xl font-extrabold text-primary leading-[1.05] mb-8 tracking-tighter uppercase">
-                LIFE CIRCLE
-            </h1>
-            <p class="text-on-surface-variant text-lg md:text-xl leading-relaxed max-w-xl mb-10 font-medium">
-                With 15 years in the Disability Sector and 5 years in Counseling, we provide a compassionate sanctuary for children and families. Our holistic approach focuses on nurturing each child through evidence-based developmental guidance.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="appointment.php" class="bg-primary text-white px-10 py-5 rounded-full font-bold text-lg hover:brightness-110 transition-all shadow-premium text-center">Book Appointment</a>
-                <a href="enroll.php" class="bg-white text-primary border border-primary/10 px-10 py-5 rounded-full font-bold text-lg hover:bg-primary-container/20 transition-all shadow-whisper text-center">Enroll Now</a>
-            </div>
-        </div>
-        <div class="relative flex justify-center mt-10 lg:mt-0">
-            <div class="absolute -top-10 -right-10 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
-            <div class="relative w-full max-w-md bg-white p-5 rounded-[3rem] shadow-premium transform rotate-2 hover:rotate-0 transition-transform duration-1000">
-                <div class="rounded-[2.5rem] overflow-hidden aspect-[4/5] bg-surface-container">
-                    <img alt="Sharmin Mujahid professional" class="w-full h-full object-cover" src="assets/fastimnge.png">
+    <div class="container mx-auto px-8 lg:px-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <!-- Text Content -->
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/5 text-primary border border-primary/10 mb-8 backdrop-blur-sm">
+                    <span class="relative flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                    </span>
+                    <span class="text-sm font-semibold tracking-wide uppercase font-manrope">Verified Developmental Support Counselor</span>
                 </div>
-            </div>
-            <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-[2rem] shadow-premium max-w-[280px] border border-primary/5">
-                <div class="flex items-center gap-4 mb-3 border-b border-surface-container pb-3">
-                    <div class="w-12 h-12 rounded-full bg-primary-container/50 flex items-center justify-center">
-                        <span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">psychology_alt</span>
+                <h1 class="text-6xl lg:text-8xl font-extrabold text-primary leading-[1.1] mb-8 font-manrope">
+                    LIFE <span class="text-blush">CIRCLE</span>
+                </h1>
+                <p class="text-xl text-on-surface-variant/80 mb-12 max-w-xl leading-relaxed">
+                    With <span class="font-bold text-primary">15 years in the Disability Sector</span> and <span class="font-bold text-primary">5 years in Counseling</span>, we provide a compassionate sanctuary for children and families.
+                </p>
+                <div class="flex flex-wrap gap-5">
+                    <button onclick="openModal('appointment')" class="btn-interact px-10 py-5 bg-primary text-white rounded-2xl font-bold text-lg shadow-premium flex items-center gap-3">
+                        Book Appointment
+                        <span class="material-symbols-outlined text-xl">calendar_month</span>
+                    </button>
+                    <button onclick="openModal('enroll')" class="btn-interact px-10 py-5 bg-white text-primary border-2 border-primary/10 rounded-2xl font-bold text-lg hover:bg-primary/5">
+                        Enroll Now
+                    </button>
+                </div>
+                
+                <!-- Quick Stats -->
+                <div class="mt-16 grid grid-cols-3 gap-8 pt-10 border-t border-primary/5">
+                    <div>
+                        <div class="text-3xl font-extrabold text-primary mb-1">15+</div>
+                        <div class="text-sm text-on-surface-variant/60 font-medium">Years Experience</div>
                     </div>
                     <div>
-                        <div class="text-base font-black text-primary">Sharmin Mujahid</div>
-                        <div class="text-[10px] text-secondary font-black uppercase tracking-widest mt-1">Lead Counselor</div>
+                        <div class="text-3xl font-extrabold text-primary mb-1">500+</div>
+                        <div class="text-sm text-on-surface-variant/60 font-medium">Families Helped</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-primary mb-1">Reg</div>
+                        <div class="text-sm text-on-surface-variant/60 font-medium">C-204398</div>
                     </div>
                 </div>
-                <p class="text-xs font-medium leading-relaxed text-on-surface-variant italic">"Dedicated to transforming lives through holistic emotional and behavioral support."</p>
+            </div>
+
+            <!-- Image Section -->
+            <div class="relative flex justify-center lg:justify-end" data-aos="fade-left" data-aos-duration="1000">
+                <div class="absolute -top-10 -right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+                <div class="relative w-full max-w-md bg-white p-5 rounded-[3rem] shadow-premium transform rotate-2 hover:rotate-0 transition-all duration-700">
+                    <div class="rounded-[2.5rem] overflow-hidden aspect-[4/5] bg-surface-container relative group">
+                        <img alt="Sharmin Mujahid professional" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="assets/fastimnge.png">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                </div>
+                <!-- Float Badge -->
+                <div class="absolute -bottom-10 -left-10 bg-white/80 backdrop-blur-xl p-8 rounded-[2.5rem] shadow-premium max-w-[300px] border border-white/50 animate-bounce-slow" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 bg-blush/20 rounded-2xl flex items-center justify-center">
+                            <span class="material-symbols-outlined text-blush text-3xl font-bold">psychology_alt</span>
+                        </div>
+                        <div>
+                            <div class="font-extrabold text-primary text-xl">Sharmin Mujahid</div>
+                            <div class="text-xs font-bold text-on-surface-variant/60 uppercase tracking-widest">Lead Counselor</div>
+                        </div>
+                    </div>
+                    <p class="text-sm italic text-on-surface-variant/80 font-medium leading-relaxed">
+                        "Dedicated to transforming lives through holistic emotional and behavioral support."
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Our Impact (Image Gallery Teaser) -->
+<!-- Our Impact -->
 <section class="py-32 bg-surface-container-low" id="gallery">
     <div class="container mx-auto px-8 lg:px-16">
         <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
@@ -80,8 +114,7 @@ $early_bird_deadline = get_setting('early_bird_deadline');
     </div>
 </section>
 
-
-<!-- About Section (Full Content Restored) -->
+<!-- About Section -->
 <section class="py-32 bg-surface" id="about">
     <div class="container mx-auto px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
         <div class="relative group flex justify-center">
@@ -103,73 +136,234 @@ $early_bird_deadline = get_setting('early_bird_deadline');
                 <p>I am a Developmental Support Counselor dedicated to supporting children with developmental challenges and their families. I have practical experience working with children with developmental delays, autism, speech and behavioral difficulties.</p>
                 <p>I focus on providing structured developmental support, parent guidance, and practical strategies that can be applied in daily life. My goal is to help each child reach their fullest potential in a supportive and understanding environment.</p>
             </div>
-            
-            <div class="pt-6 space-y-8">
-                <div>
-                    <h3 class="text-2xl font-extrabold text-primary mb-4">My Approach</h3>
-                    <p class="text-on-surface-variant text-lg">I follow a child-centered and family-focused approach. Each child is unique, so I create personalized support strategies based on individual needs. I also work closely with parents to ensure consistency between support sessions and home environment.</p>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-extrabold text-primary mb-4">Training / Qualification</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-3 text-on-surface-variant font-bold">
-                            <span class="material-symbols-outlined text-secondary">verified</span>
-                            Developmental Disorder Management Certificate (DMC)
-                        </li>
-                        <li class="flex items-center gap-3 text-on-surface-variant font-bold">
-                            <span class="material-symbols-outlined text-secondary">verified</span>
-                            Training in Child Development & Behavior Support
-                        </li>
-                        <li class="flex items-center gap-3 text-on-surface-variant font-bold">
-                            <span class="material-symbols-outlined text-secondary">verified</span>
-                            Practical experience working with children with special needs
-                        </li>
-                    </ul>
-                </div>
-                <a href="about.php" class="text-secondary font-black border-b-2 border-secondary pb-1 hover:text-primary hover:border-primary transition-all">Read More About My Story</a>
-            </div>
+            <a href="about.php" class="text-secondary font-black border-b-2 border-secondary pb-1 hover:text-primary hover:border-primary transition-all">Read More About My Story</a>
         </div>
     </div>
 </section>
 
-<!-- Services Section (Full Content Restored) -->
-<section class="py-32 bg-primary-container/20" id="services">
+<!-- Services Section -->
+<section id="services" class="py-32 bg-surface-container">
     <div class="container mx-auto px-8 lg:px-16">
-        <div class="text-center mb-20">
-            <span class="text-secondary font-bold tracking-[0.2em] uppercase text-sm">Comprehensive Support</span>
-            <h2 class="text-4xl md:text-6xl font-extrabold text-primary mt-4 mb-6">My Services</h2>
-            <p class="text-on-surface-variant max-w-2xl mx-auto text-lg">Providing a specialized spectrum of support for developmental, emotional, and behavioral well-being.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-10 rounded-[3rem] shadow-whisper hover:shadow-premium transition-all duration-500 border border-primary/5 group">
-                <div class="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
-                    <span class="material-symbols-outlined text-secondary text-4xl group-hover:text-white">fact_check</span>
-                </div>
-                <h3 class="text-2xl font-black text-primary mb-4">Developmental Screening & Basic Assessment</h3>
-                <p class="text-on-surface-variant mb-6 leading-relaxed">Comprehensive evaluation and personalized growth roadmaps for each child.</p>
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl lg:text-6xl font-extrabold text-primary mb-6 font-manrope">Our Expertise</h2>
+                <p class="text-on-surface-variant/70 max-w-xl text-lg">Comprehensive developmental support tailored to every family's unique journey.</p>
             </div>
-            <div class="bg-white p-10 rounded-[3rem] shadow-whisper hover:shadow-premium transition-all duration-500 border border-primary/5 group">
-                <div class="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
-                    <span class="material-symbols-outlined text-secondary text-4xl group-hover:text-white">family_restroom</span>
-                </div>
-                <h3 class="text-2xl font-black text-primary mb-4">Parent Counseling & Guidance</h3>
-                <p class="text-on-surface-variant mb-6 leading-relaxed">Expert strategies to navigate the complexities of modern parenting and child development.</p>
-            </div>
-            <div class="bg-white p-10 rounded-[3rem] shadow-whisper hover:shadow-premium transition-all duration-500 border border-primary/5 group">
-                <div class="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
-                    <span class="material-symbols-outlined text-secondary text-4xl group-hover:text-white">psychology_alt</span>
-                </div>
-                <h3 class="text-2xl font-black text-primary mb-4">Behavior Management Support</h3>
-                <p class="text-on-surface-variant mb-6 leading-relaxed">Practical strategies to address challenging behaviors and foster positive development.</p>
+            <div class="flex gap-4" data-aos="fade-left">
+                <button class="swiper-prev w-14 h-14 rounded-2xl bg-white text-primary shadow-premium hover:bg-primary hover:text-white transition-all flex items-center justify-center">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </button>
+                <button class="swiper-next w-14 h-14 rounded-2xl bg-white text-primary shadow-premium hover:bg-primary hover:text-white transition-all flex items-center justify-center">
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
             </div>
         </div>
-        <div class="text-center mt-16">
-            <a href="services.php" class="bg-primary text-white px-10 py-5 rounded-full font-bold text-lg hover:brightness-110 transition-all shadow-premium inline-block">Learn More About Services</a>
+
+        <!-- Swiper Carousel -->
+        <div class="swiper servicesSwiper !pb-20">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide h-auto">
+                    <div class="bg-white p-10 rounded-[3rem] h-full shadow-whisper hover:shadow-premium transition-all duration-500 border border-primary/5 group">
+                        <div class="w-16 h-16 bg-primary/5 rounded-3xl flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-4xl">neurology</span>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-primary mb-5 font-manrope">Autism & Neuro-Dev</h3>
+                        <p class="text-on-surface-variant/70 leading-relaxed">Evidence-based developmental guidance focusing on neuro-diverse children's unique potential.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                    <div class="bg-white p-10 rounded-[3rem] h-full shadow-whisper hover:shadow-premium transition-all duration-500 border border-primary/5 group">
+                        <div class="w-16 h-16 bg-primary/5 rounded-3xl flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-4xl">family_restroom</span>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-primary mb-5 font-manrope">Family Counseling</h3>
+                        <p class="text-on-surface-variant/70 leading-relaxed">Holistic support for families, fostering emotional resilience and stronger bonds through empathy.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                    <div class="bg-white p-10 rounded-[3rem] h-full shadow-whisper hover:shadow-premium transition-all duration-500 border border-primary/5 group">
+                        <div class="w-16 h-16 bg-primary/5 rounded-3xl flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-4xl">sentiment_satisfied</span>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-primary mb-5 font-manrope">CBT & Emotional</h3>
+                        <p class="text-on-surface-variant/70 leading-relaxed">Practical emotional and behavioral strategies using Cognitive Behavioral Therapy principles.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                    <div class="bg-white p-10 rounded-[3rem] h-full shadow-whisper hover:shadow-premium transition-all duration-500 border border-primary/5 group">
+                        <div class="w-16 h-16 bg-primary/5 rounded-3xl flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-4xl">school</span>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-primary mb-5 font-manrope">Teacher Training</h3>
+                        <p class="text-on-surface-variant/70 leading-relaxed">Empowering educators with tools and strategies to create inclusive learning environments.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                    <div class="bg-white p-10 rounded-[3rem] h-full shadow-whisper hover:shadow-premium transition-all duration-500 border border-primary/5 group">
+                        <div class="w-16 h-16 bg-primary/5 rounded-3xl flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-4xl">auto_stories</span>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-primary mb-5 font-manrope">Special Education</h3>
+                        <p class="text-on-surface-variant/70 leading-relaxed">Customized educational support paths for children with diverse learning needs.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                    <div class="bg-white p-10 rounded-[3rem] h-full shadow-whisper hover:shadow-premium transition-all duration-500 border border-primary/5 group">
+                        <div class="w-16 h-16 bg-primary/5 rounded-3xl flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-4xl">gavel</span>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-primary mb-5 font-manrope">Legal Guidance</h3>
+                        <p class="text-on-surface-variant/70 leading-relaxed">Navigating rights and advocacy for children within the disability sector framework.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination !-bottom-1"></div>
         </div>
     </div>
 </section>
 
-<!-- Life Circle in Action (Social Videos) -->
+<!-- Reviews Section -->
+<section id="reviews" class="py-32 overflow-hidden">
+    <div class="container mx-auto px-8 lg:px-16">
+        <div class="text-center mb-20" data-aos="fade-up">
+            <h2 class="text-4xl lg:text-6xl font-extrabold text-primary mb-6 font-manrope">Success Stories</h2>
+            <p class="text-on-surface-variant/70 max-w-2xl mx-auto text-lg">Heartfelt testimonials from families we've had the privilege to support.</p>
+        </div>
+
+        <div class="swiper reviewsSwiper !overflow-visible">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide w-[350px] md:w-[450px]">
+                    <div class="bg-white p-12 rounded-[4rem] shadow-whisper border border-primary/5 relative">
+                        <span class="material-symbols-outlined text-blush text-7xl absolute -top-8 -left-4 opacity-20">format_quote</span>
+                        <div class="flex gap-1 mb-8">
+                            <span class="material-symbols-outlined text-blush fill-1">star</span>
+                            <span class="material-symbols-outlined text-blush fill-1">star</span>
+                            <span class="material-symbols-outlined text-blush fill-1">star</span>
+                            <span class="material-symbols-outlined text-blush fill-1">star</span>
+                            <span class="material-symbols-outlined text-blush fill-1">star</span>
+                        </div>
+                        <p class="text-xl text-primary font-medium italic mb-10 leading-relaxed font-manrope">
+                            "শারমিন ম্যাডামের গাইডেন্সে আমার সন্তানের আচরণের অনেক ইতিবাচক পরিবর্তন এসেছে। তিনি খুব ধৈর্য নিয়ে সবকিছু বোঝান।"
+                        </p>
+                        <div class="flex items-center gap-5">
+                            <div class="w-16 h-16 bg-primary-container rounded-2xl flex items-center justify-center text-primary font-bold text-2xl uppercase">ন</div>
+                            <div>
+                                <div class="font-extrabold text-primary text-xl">নাসরিন আক্তার</div>
+                                <div class="text-sm text-on-surface-variant/60 font-bold uppercase tracking-wider">গর্বিত মা</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide w-[350px] md:w-[450px]">
+                    <div class="bg-white p-12 rounded-[4rem] shadow-whisper border border-primary/5 relative">
+                        <span class="material-symbols-outlined text-blush text-7xl absolute -top-8 -left-4 opacity-20">format_quote</span>
+                        <div class="flex gap-1 mb-8">
+                            <span class="material-symbols-outlined text-blush fill-1">star</span>
+                            <span class="material-symbols-outlined text-blush fill-1">star</span>
+                            <span class="material-symbols-outlined text-blush fill-1">star</span>
+                            <span class="material-symbols-outlined text-blush fill-1">star</span>
+                            <span class="material-symbols-outlined text-blush fill-1">star</span>
+                        </div>
+                        <p class="text-xl text-primary font-medium italic mb-10 leading-relaxed font-manrope">
+                            "Life Circle-এর স্পেশাল এডুকেশন সাপোর্ট আমাদের জন্য আশীর্বাদস্বরূপ। আমার ছেলের আত্মবিশ্বাস এখন আকাশচুম্বী।"
+                        </p>
+                        <div class="flex items-center gap-5">
+                            <div class="w-16 h-16 bg-secondary-container rounded-2xl flex items-center justify-center text-primary font-bold text-2xl uppercase">ক</div>
+                            <div>
+                                <div class="font-extrabold text-primary text-xl">কামরুল হাসান</div>
+                                <div class="text-sm text-on-surface-variant/60 font-bold uppercase tracking-wider">অভিভাবক</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide w-[350px] md:w-[450px]">
+                    <div class="bg-white p-12 rounded-[4rem] shadow-whisper border border-primary/5 relative">
+                        <span class="material-symbols-outlined text-blush text-7xl absolute -top-8 -left-4 opacity-20">format_quote</span>
+                        <div class="flex gap-1 mb-8">
+                            <span class="material-symbols-outlined text-blush fill-1">star</span>
+                            <span class="material-symbols-outlined text-blush fill-1">star</span>
+                            <span class="material-symbols-outlined text-blush fill-1">star</span>
+                            <span class="material-symbols-outlined text-blush fill-1">star</span>
+                            <span class="material-symbols-outlined text-blush fill-1">star</span>
+                        </div>
+                        <p class="text-xl text-primary font-medium italic mb-10 leading-relaxed font-manrope">
+                            "ম্যাডামের থেরাপি সেশনগুলো খুব কার্যকর। আমার সন্তানের স্পিচ ডেভেলপমেন্টে আমরা দারুণ ফলাফল পেয়েছি।"
+                        </p>
+                        <div class="flex items-center gap-5">
+                            <div class="w-16 h-16 bg-blush/20 rounded-2xl flex items-center justify-center text-primary font-bold text-2xl uppercase">স</div>
+                            <div>
+                                <div class="font-extrabold text-primary text-xl">সাদিয়া রহমান</div>
+                                <div class="text-sm text-on-surface-variant/60 font-bold uppercase tracking-wider">অভিভাবক</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Form -->
+<div id="actionModal" class="fixed inset-0 z-[100] hidden overflow-y-auto bg-primary/40 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-2xl rounded-[3rem] shadow-premium overflow-hidden transform transition-all modal-enter">
+        <div class="relative p-10 pt-16">
+            <button onclick="closeModal()" class="absolute top-8 right-8 w-12 h-12 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary/5 transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="text-center mb-10">
+                <div class="w-20 h-20 bg-primary/5 rounded-3xl flex items-center justify-center text-primary mx-auto mb-6">
+                    <span id="modalIcon" class="material-symbols-outlined text-4xl">event_available</span>
+                </div>
+                <h2 id="modalTitle" class="text-3xl lg:text-4xl font-extrabold text-primary font-manrope">Book Appointment</h2>
+                <p id="modalDesc" class="text-on-surface-variant/60 mt-3 font-medium">Take the first step towards a brighter future.</p>
+            </div>
+            
+            <form id="modalForm" method="POST" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-primary mb-2 ml-2">Full Name</label>
+                        <input type="text" name="full_name" required class="w-full px-6 py-4 rounded-2xl bg-surface-container border-none focus:ring-2 focus:ring-primary/20" placeholder="e.g. Abdullah Al Mamun">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-primary mb-2 ml-2">WhatsApp Number</label>
+                        <input type="tel" name="whatsapp_number" required class="w-full px-6 py-4 rounded-2xl bg-surface-container border-none focus:ring-2 focus:ring-primary/20" placeholder="e.g. 017xxxxxxxx">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-primary mb-2 ml-2">Select Service</label>
+                    <select name="service_type" required class="w-full px-6 py-4 rounded-2xl bg-surface-container border-none focus:ring-2 focus:ring-primary/20 appearance-none">
+                        <option value="">Choose a Service...</option>
+                        <option value="Autism & Neuro-Dev">Autism & Neuro-Dev</option>
+                        <option value="Family Counseling">Family Counseling</option>
+                        <option value="CBT & Emotional">CBT & Emotional</option>
+                        <option value="Teacher Training">Teacher Training</option>
+                        <option value="Special Education">Special Education</option>
+                        <option value="DMC Certificate Course">DMC Certificate Course</option>
+                    </select>
+                </div>
+                <div id="appointmentSpecifics" class="hidden grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-primary mb-2 ml-2">Preferred Date</label>
+                        <input type="date" name="appointment_date" class="w-full px-6 py-4 rounded-2xl bg-surface-container border-none focus:ring-2 focus:ring-primary/20">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-primary mb-2 ml-2">Transaction ID (Initial Booking)</label>
+                        <input type="text" name="transaction_id" class="w-full px-6 py-4 rounded-2xl bg-surface-container border-none focus:ring-2 focus:ring-primary/20" placeholder="bKash/Nagad Ref">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-primary mb-2 ml-2">Message (Optional)</label>
+                    <textarea name="message" rows="3" class="w-full px-6 py-4 rounded-2xl bg-surface-container border-none focus:ring-2 focus:ring-primary/20" placeholder="How can we help?"></textarea>
+                </div>
+                <button type="submit" class="w-full py-5 bg-primary text-white rounded-2xl font-bold text-lg shadow-premium hover:bg-secondary transition-all">
+                    Confirm & Send 🚀
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Social Section -->
 <section class="py-32 bg-surface" id="videos">
     <div class="container mx-auto px-8 lg:px-16">
         <div class="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">

@@ -1,20 +1,21 @@
-    </main>
+</main>
 
-    <footer class="bg-primary text-white py-16 px-8 border-t border-white/10">
-        <div class="container mx-auto max-w-7xl">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                <div class="flex flex-col gap-6 md:col-span-1">
-                    <div class="flex items-center gap-3">
-                        <img alt="Logo" class="h-8 w-8 md:h-10 md:w-10 brightness-0 invert" src="assets/logo.png">
-                        <div class="flex flex-col">
-                            <span class="text-lg md:text-xl font-black font-manrope leading-tight">LIFE CIRCLE</span>
-                            <span class="text-[8px] md:text-[10px] text-white/50 tracking-widest uppercase">Reg: C-204398</span>
+    <footer class="bg-primary text-white pt-32 pb-12 overflow-hidden relative">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blush/30 to-transparent"></div>
+        
+        <div class="container mx-auto px-8 lg:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+                <!-- Brand Profile -->
+                <div class="lg:col-span-1" data-aos="fade-up">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center p-2">
+                            <img src="assets/logo.png" alt="Life Circle" class="w-full h-full object-contain">
                         </div>
+                        <span class="text-2xl font-extrabold tracking-tighter font-manrope">LIFE CIRCLE</span>
                     </div>
-                    <p class="text-white/60 text-xs md:text-sm leading-relaxed max-w-xs">
-                        Empowering children and families through counseling excellence and heart-led developmental guidance. Developmental Support Counselor.
+                    <p class="text-secondary-container/60 leading-relaxed mb-8 font-medium">
+                        Dedicated to providing a compassionate sanctuary for children with developmental challenges and their families.
                     </p>
-                </div>
                 <div>
                     <h4 class="text-xs uppercase tracking-[0.2em] font-bold text-white/40 mb-8">Navigation</h4>
                     <ul class="flex flex-col gap-4 text-sm font-medium text-white/80">

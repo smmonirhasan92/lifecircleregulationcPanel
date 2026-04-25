@@ -14,75 +14,49 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Work+Sans:wght@300;400;500;600&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Core Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     
-    <!-- Material Symbols -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=block" rel="stylesheet">
+    <!-- Swiper.js for Carousels -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- AOS for Scroll Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
         tailwind.config = {
-            darkMode: "class",
             theme: {
                 extend: {
-                    "colors": {
-                        "primary": "#1b4332", 
-                        "on-primary": "#ffffff",
-                        "primary-container": "#f0f4f1",
-                        "secondary": "#527853",
-                        "secondary-container": "#e9c46a",
-                        "background": "#fdfcf0", 
-                        "surface": "#ffffff",
-                        "surface-container-low": "#f9f7f2",
-                        "surface-container": "#f1f3ed",
-                        "on-surface": "#1b4332",
-                        "on-surface-variant": "#405d4b",
-                        "outline": "#787c75",
-                        "blush": "#ffb5a7"
+                    colors: {
+                        primary: '#1b4332',
+                        secondary: '#527853',
+                        blush: '#ffb5a7',
+                        'primary-container': '#d8f3dc',
+                        'secondary-container': '#b7e4c7',
+                        'surface': '#fdfcf0',
+                        'surface-container': '#f5f3e7',
+                        'on-surface-variant': '#404944',
+                        'outline': '#707973',
                     },
-                    "fontFamily": {
-                        "headline": ["Manrope"],
-                        "body": ["Work Sans"],
-                        "label": ["Work Sans"],
-                        "bengali": ["Hind Siliguri", "sans-serif"]
+                    fontFamily: {
+                        manrope: ['Manrope', 'sans-serif'],
+                        sans: ['Work Sans', 'sans-serif'],
+                        bengali: ['Hind Siliguri', 'sans-serif'],
                     },
-                    "boxShadow": {
-                        "whisper": "0 10px 40px rgba(27, 67, 50, 0.05)",
-                        "premium": "0 20px 60px rgba(27, 67, 50, 0.08)"
+                    boxShadow: {
+                        'premium': '0 20px 50px rgba(27, 67, 50, 0.12)',
+                        'whisper': '0 10px 30px rgba(0, 0, 0, 0.04)',
                     }
-                },
-            },
+                }
+            }
         }
     </script>
 
     <style>
-        /* Modern Transitions */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .reveal {
-            opacity: 0;
-            transform: translatey(40px);
-            transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .reveal.active {
-            opacity: 1;
-            transform: translatey(0);
-        }
-
-        .whisper-shadow {
-            box-shadow: 0 10px 40px rgba(27, 67, 50, 0.05);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        body {
-            font-family: 'Work Sans', sans-serif;
-            background-color: #fdfcf0;
             color: #1b4332;
         }
 
