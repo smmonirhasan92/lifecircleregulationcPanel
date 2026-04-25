@@ -73,21 +73,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 require_once 'includes/header.php';
 ?>
 
-<main class="min-h-screen pt-12 pb-24 px-6 bg-surface-container-low/30 relative overflow-hidden">
-    <!-- Background Accents -->
-    <div class="absolute top-0 left-0 -ml-20 -mt-20 w-80 h-80 bg-secondary/5 rounded-full blur-3xl -z-10"></div>
-    <div class="absolute bottom-0 right-0 -mr-20 -mb-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
-
-    <div class="max-w-7xl mx-auto">
-        <header class="max-w-3xl mb-16 reveal">
-            <div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary/10 text-secondary rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
+    <div class="max-w-7xl mx-auto py-12 md:py-20">
+        <header class="max-w-3xl mb-16 animate-fade-in-up">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-secondary/5 text-secondary rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-secondary/10">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+                </span>
                 Session Booking: Priority Access
             </div>
-            <h1 class="text-4xl md:text-6xl font-black text-secondary leading-[1.1] md:-tracking-[0.03em] mb-6 font-bengali">
-                আজই বুক করুন আপনার <span class="text-on-surface">বিশেষায়িত সেশন</span>।
+            <h1 class="text-4xl md:text-7xl font-extrabold text-secondary leading-[1.1] mb-8 font-manrope">
+                Secure Your <span class="text-on-surface">Consultation</span>
             </h1>
-            <p class="text-lg text-outline leading-relaxed max-w-2xl font-bengali">
-                শারমিন মুজাহিদ ম্যামের বিশেষজ্ঞ গাইডেন্স ও সাপোর্টে আপনার সন্তানের সুন্দর ভবিষ্যৎ বিনির্মাণে প্রথম পদক্ষেপ নিন। আপনার সুবিধাজনক সময় নির্বাচন করুন।
+            <p class="text-xl text-on-surface-variant/80 font-medium leading-relaxed">
+                Take the next step in your child's development. Book a specialized session with Sharmin Mujahid at your convenient time.
             </p>
         </header>
 
@@ -191,6 +190,6 @@ require_once 'includes/header.php';
             </div>
         </div>
     </div>
-</main>
+    </div>
 
 <?php require_once 'includes/footer.php'; ?>

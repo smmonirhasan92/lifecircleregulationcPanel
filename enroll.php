@@ -73,21 +73,20 @@ $early_bird_deadline = get_setting('early_bird_deadline');
 require_once 'includes/header.php';
 ?>
 
-<main class="min-h-screen pt-12 pb-24 px-6 bg-surface-container-low/30 relative overflow-hidden">
-    <!-- Abstract Background Elements -->
-    <div class="absolute top-0 right-0 -mr-32 -mt-32 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl -z-10"></div>
-    <div class="absolute bottom-0 left-0 -ml-32 -mb-32 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl -z-10"></div>
-
-    <div class="max-w-7xl mx-auto">
-        <header class="max-w-3xl mb-16 reveal">
-            <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
+    <div class="max-w-7xl mx-auto py-12 md:py-20">
+        <header class="max-w-3xl mb-16 animate-fade-in-up">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary/5 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-8 border border-primary/10">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </span>
                 Registration Phase: Active
             </div>
-            <h1 class="text-4xl md:text-6xl font-black text-primary leading-[1.1] md:-tracking-[0.03em] mb-6 font-bengali">
-                নতুন সম্ভাবনার পথে <span class="text-on-surface">প্রথম পদক্ষেপ</span> নিন।
+            <h1 class="text-4xl md:text-7xl font-extrabold text-primary leading-[1.1] mb-8 font-manrope">
+                Start Your <span class="text-blush">Journey</span> Today
             </h1>
-            <p class="text-lg text-outline font-bengali">
-                শারমিন মুজাহিদ ম্যামের বিশেষজ্ঞ গাইডেন্সে আপনার বা আপনার সন্তানের উজ্জ্বল ভবিষ্যৎ বিনির্মাণে আমরা প্রতিশ্রুতিবদ্ধ। সহজ ৪টি ধাপে রেজিষ্ট্রেশন সম্পন্ন করুন।
+            <p class="text-xl text-on-surface-variant/80 font-medium leading-relaxed">
+                Take the first step towards a brighter future with Sharmin Mujahid's expert guidance. Our registration process is simple and secure.
             </p>
         </header>
 
@@ -225,7 +224,7 @@ require_once 'includes/header.php';
             </div>
         </div>
     </div>
-</main>
+    </div>
 
 <!-- Attractive Syllabus Modal -->
 <div id="syllabusModal" class="fixed inset-0 z-[100] hidden overflow-y-auto bg-black/40 backdrop-blur-sm transition-opacity duration-300">
